@@ -1,5 +1,9 @@
-
 document.addEventListener('DOMContentLoaded', () => {
+    var FIREFOX = /Firefox/i.test(navigator.userAgent);
+    if (FIREFOX) {
+        document.querySelector(".gradients-container").style.display="none";
+    }
+
     const interBubble = document.querySelector('.interactive');
     let curX = 0;
     let curY = 0;
