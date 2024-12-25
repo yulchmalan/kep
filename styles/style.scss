@@ -1,0 +1,20 @@
+@import "./background";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #fdfdf3;
+    --color1: 89, 102, 177;
+    --color2: 245, 200, 77;
+    --color3: 251, 207, 65;
+    --color4: 246, 163, 48;
+    --color5: 136, 148, 183;
+    --color-interactive: 21, 43, 171;
+    --circle-size: 80%;
+    --blending: hard-light;
+}
+
