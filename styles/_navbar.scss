@@ -20,7 +20,8 @@ nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px; 
+        padding-top: 15px; 
+        padding-bottom: 15px; 
     }
     .dropdown-menu {
         display: none;
@@ -159,6 +160,7 @@ nav {
                 }
                 > .dropdown-menu {
                     max-height: 500px;
+                    max-width: 250px;
                 }
             }
             .dropdown-menu {
@@ -203,6 +205,13 @@ nav {
     nav {
         .container {
             padding: 15px 0;
+        }
+        .dropdown {
+            &:hover {
+                > .dropdown-menu {
+                    max-width: max-content;
+                }
+            }
         }
     }
 }
