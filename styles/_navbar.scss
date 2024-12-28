@@ -7,7 +7,7 @@ header {
 
 nav {
     position: fixed;
-    top: 96px;
+    top: 136px;
     left: 0;
     right: 0;
     background-color: $white;
@@ -16,9 +16,6 @@ nav {
     z-index: 10; 
     font-size: 20px;
     transition: 1s all linear;
-    &:has(.nav-links.nav-active) {
-        border-bottom: 1px $border solid;
-    }
     .container {
         display: flex;
         justify-content: space-between;
@@ -73,15 +70,16 @@ nav {
     }
     .nav-links { 
         position: absolute;
-        max-width: 800px;
+        max-width: 500px;
         flex-direction: column;
         display: flex;
         align-items: flex-end;
         height: calc(100vh - 180px);
         width: 100%;
-        top: 100px;
+        top: 80px;
         right: 0;
         row-gap: 40px;
+        background-color: $white;
         list-style: none;
         padding: 30px;
         transition: all linear .6s;
@@ -120,8 +118,8 @@ nav {
         cursor: pointer;
     }
     .burger {
-        width: 54px;
-        height: 54px;
+        width: 32px;
+        height: 32px;
         justify-content: center;
         align-items: center;
         display: flex;
@@ -130,9 +128,6 @@ nav {
 
 @media screen and (min-width: 1024px) {
     nav {
-        &:has(.nav-links.nav-active) {
-            border-bottom: none;
-        }
         .dropdown-menu {
             overflow-y: hidden;
             overflow-x: hidden;
@@ -169,8 +164,11 @@ nav {
             .dropdown-menu {
                 display: flex;
                 max-height: 0;
-                padding: 15px;
+                padding: 10px;
                 left: -15px;
+                li {
+                    padding: 10px 5px;
+                }
             }
         }
         .nav-links {
@@ -192,6 +190,10 @@ nav {
         }
         .burger {
             display: none;
+        }
+        .logo {
+            width: auto;
+            max-height: none;
         }
     }
 }
