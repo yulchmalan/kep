@@ -1,4 +1,7 @@
+@import "./variables";
 @import "./background";
+@import "./topbar";
+@import "./navbar";
 
 * {
     padding: 0;
@@ -6,15 +9,29 @@
     box-sizing: border-box;
 }
 
-:root {
-    --color-bg: #fdfdf3;
-    --color1: 89, 102, 177;
-    --color2: 245, 200, 77;
-    --color3: 251, 207, 65;
-    --color4: 246, 163, 48;
-    --color5: 136, 148, 183;
-    --color-interactive: 21, 43, 171;
-    --circle-size: 80%;
-    --blending: hard-light;
+body {
+    font-family: "Outfit", "Poppins", sans-serif;
+    padding-top: 80px;
+    background-color: $white;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+    &:visited,
+    &:focus {
+        color: inherit;
+    }
+}
+
+.container { 
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media screen and (min-width: 1600px) {
+    .container { 
+        padding: 0;
+    }
+}

@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>kepska strona</title>
   </head>
@@ -39,6 +41,75 @@
       </svg>
       
     </div>
+    <header>
+        <address class="topbar">
+            <div class="container">
+              <div class="topbar_section">
+                <p>Ми в соцмережах:</p>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-telegram"></i>
+                <i class="fa-brands fa-viber"></i>
+              </div>
+              <div class="topbar_section">
+                <div class="geo"><i class="fa-solid fa-location-dot"></i><a href="https://maps.app.goo.gl/C75wGNHST8XtxAoP6">вул. Вовчинецька, 223</a></div>
+                <div class="mail"><i class="fa-solid fa-envelope"></i><a href="mailto:ifkep@ukr.net">ifkep@ukr.net</a></div>
+                <div class="tel">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <div>
+                        <a href="tel:+380342783046">0342783046</a>
+                        <a href="tel:+380342783022">0342783022</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </address>
+        <nav>
+          <div class="container">
+            <a href="index.html"><img src="images/logo.png" alt="Логотип Коледжу електронних приладів"> </a>
+            <ul class="nav-links">
+              <li><a href="index.html" class="active">Головна</a></li>
+              <li class="dropdown"><a href="#">Про коледж</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Дирекція</a></li>
+                  <li><a href="#">Циклові комісії</a></li>
+                  <li><a href="#">Відділення</a></li>
+                  <li><a href="#">Бібліотека</a></li>
+                  <li><a href="#">Публічна інформація</a></li>
+                  <li><a href="#">Нормативно-правова база</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#">Студентам</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Розклад</a></li>
+                  <li><a href="#">Студенське самоврядування</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#">Вступнику</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Підготовчі курси</a></li>
+                  <li><a href="#">Правила прийому та інші нормативні документи</a></li>
+                  <li><a href="#">Програма вступних випробувань</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#">Викладачам</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Графік навчального процесу</a></li>
+                  <li><a href="#">Освітньо-професійні програми</a></li>
+                  <li><a href="#">Інше</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Контакти</a></li>
+            </ul>
+            <button type="button" id="burger" class="burger icon">
+              <svg height="54" width="54">
+                  <use class="burger-icon" href="images/icons.svg#burger"/>
+              </svg>
+            </button>
+          </div>
+        </nav>
+    </header>
+    <script src="script/topbar.js"></script>
+    <script src="script/navbar.js"></script>
     <script src="script/mouseMovement.js"></script>
   </body>
 </html>

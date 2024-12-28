@@ -1,0 +1,93 @@
+@import "./variables";
+
+.topbar {
+    background: linear-gradient(180deg, rgba(0,192,255,1) 50%, rgba(90,131,237,1) 50%);
+    color: $text-light;
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: .6s all linear;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .topbar_section {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        &:nth-child(1) {
+            min-width: 100%;
+            font-weight: bold;
+            gap: 24px;
+            font-size: 1.25rem;
+        }
+        &:nth-child(2) {
+            font-size: 1rem;
+            gap: 20px;
+            justify-content: flex-end;
+            > div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                position: relative;
+                &:not(:last-child)::after {
+                    content: "";
+                    position: absolute;
+                    right: -10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 30px;
+                    background-color: $white;
+                    border-radius: 1px;
+                }
+                > div {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+        i {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.topbar-hidden {
+    transform: translateY(calc(-1 * 80px));
+    & + nav {
+        top: 0;
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    .topbar {
+        background: linear-gradient(90deg, rgba(0,192,255,1) 40%, rgba(90,131,237,1) 40%);
+        .container {
+            flex-wrap: nowrap
+        }
+        .topbar_section {
+            padding: 20px 0;
+            &:nth-child(1) {
+                min-width: auto;
+                max-width: 40%;
+                font-size: 1.5rem;
+            }
+            &:nth-child(2) {
+                font-size: 1.25rem;
+                gap: 40px;
+                > div {
+                    &:not(:last-child)::after {
+                        right: -20px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+        i {
+            font-size: 2rem;
+        }
+    }
+}

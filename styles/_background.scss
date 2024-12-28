@@ -34,15 +34,28 @@
     }
 }
 
+:root {
+    --color-bg: #fbfbfb;
+    --color1: 89, 102, 177;
+    --color2: 245, 200, 77;
+    --color3: 251, 207, 65;
+    --color4: 0, 192, 255;
+    --color5: 136, 148, 183;
+    --color-interactive: 21, 43, 171;
+    --circle-size: 80%;
+    --blending: hard-light;
+}
+
 .gradient-bg {
+  // display: none; //temp
     width: 100vw;
     height: 100vh;
-    position: relative;
+    position: absolute;
+    z-index: -1;
     overflow: hidden;
     top: 0;
     left: 0;
     background: var(--color-bg);
-  
     svg:not(.noise) {
       position: fixed;
       top:0;
@@ -58,7 +71,6 @@
         top:0; bottom: 0;
         left: 0; right: 0;
     }
-  
   
     .gradients-container {
       filter: url(#goo) blur(80px) ;
