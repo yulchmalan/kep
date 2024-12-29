@@ -1,0 +1,135 @@
+@import "./variables";
+
+:root {
+    --swiper-theme-color: $white;
+}
+
+.hero-section {
+    overflow: hidden;
+    color: $text-light;
+    h1 {
+        font-size: 1.75rem;
+    }
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    p {
+        line-height: 150%;
+    }
+    .swiper-hero {
+        position: relative;
+    }
+    .swiper-slide {
+        width: 100%;
+        max-height: 70vh;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        padding: 60px 30px;
+        aspect-ratio: 1 / 1.5;
+        display: flex;
+        align-items: center;
+        .content {
+            max-width: 840px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            > div {
+                display: flex;
+                gap: 25px;
+            }
+        }
+        .image-wrapper {
+            position: absolute;
+            top: 0; bottom: 0;
+            left: 0; right: 0;
+            z-index: -1;
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 0; bottom: 0;
+                left: 0; right: 0;
+                background-color: $dark-blue;
+                opacity: .5;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .swiper-button-prev {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 45px;
+        width: 64px;
+        height: 64px;
+        background-color: #fbfbfb7d;
+        border-radius: 50%;
+        &::after {
+            content: "";
+            background: url('../images/sprites.png') -0 -0;
+            width: 48px;
+            height: 48px;
+        }
+    }
+    .swiper-button-next {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 45px;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: #fbfbfb7d;
+        &::after {
+            content: "";
+            background: url('../images/sprites.png') -48px -0;
+            width: 48px;
+            height: 48px;
+        }
+    }
+    .swiper-button-prev, .swiper-button-next{
+        display: none;
+    }
+    .swiper-pagination {
+        bottom: 30px;
+    }
+    .swiper-pagination-bullet {
+        background-color: $white;
+    }
+    .swiper-pagination-bullet-active-prev-prev, .swiper-pagination-bullet-active-next-next {
+        transform: scale(.6);
+    }
+    .swiper-pagination-bullet-active-prev, .swiper-pagination-bullet-active-next {
+        opacity: .6;
+        transform: scale(.9);
+    }
+}
+
+@media screen and (min-width: 1124px) {
+    .hero-section {
+        h2 {
+            font-size: 3rem;
+        }
+        .swiper-slide {
+            max-height: 80vh;
+            aspect-ratio: 9 / 5;
+            padding: 190px 160px;
+            .content {
+                gap: 25px;
+                > div {
+                    gap: 35px;
+                }
+            }
+        }
+        .swiper-button-prev, .swiper-button-next {
+            display: flex;
+        }
+    }
+}
