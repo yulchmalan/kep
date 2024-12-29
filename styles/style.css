@@ -628,7 +628,7 @@ nav .burger {
   overflow: hidden;
   z-index: 1;
   padding: 60px 30px;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1/1.5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
