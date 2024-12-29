@@ -18,7 +18,6 @@ burger.addEventListener('click', () => {
         topbar.classList.add("topbar-hidden");
     } else {
         icon.setAttribute('href', 'images/icons.svg#burger');
-        topbar.classList.remove("topbar-hidden");
     }
 });
 
