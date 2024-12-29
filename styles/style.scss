@@ -20,6 +20,8 @@ body {
 
 a {
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 section:not(.hero-section) {
@@ -61,6 +63,8 @@ section:not(.hero-section) {
 }
 
 .btn {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     display: inline-block;
     font-weight: bold;
     padding: 15px 30px;

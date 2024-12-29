@@ -445,7 +445,7 @@ nav .nav-links {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  height: calc(100vh - 180px);
+  height: calc(100vh - 80px);
   width: 100%;
   top: 80px;
   right: 0;
@@ -900,6 +900,8 @@ body {
 
 a {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 section:not(.hero-section) h2 {
@@ -942,6 +944,8 @@ section:not(.hero-section) h2 {
 }
 
 .btn {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   display: inline-block;
   font-weight: bold;
   padding: 15px 30px;
