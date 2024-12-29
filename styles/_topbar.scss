@@ -3,7 +3,7 @@
 .topbar {
     background: linear-gradient(180deg, rgba(0,192,255,1) 50%, rgba(90,131,237,1) 50%);
     color: $text-light;
-    position: static;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -47,6 +47,9 @@
                 > div {
                     display: flex;
                     flex-direction: column;
+                }
+                a {
+                    color: inherit;
                 }
             }
             i {

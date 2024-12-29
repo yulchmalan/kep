@@ -1,0 +1,128 @@
+@import "./variables";
+
+.cards-section {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    .card {
+        display: inline-block;
+        border-radius: 20px 20px 20px 0;
+        background-color: #fff;
+        box-shadow: -2px 2px 40px rgba(222, 222, 222, 0.25);
+        padding: 20px 20px 10px 20px;
+        &:hover {
+            > h3 {
+                background-size: 100% 2px;
+                color: inherit;
+                color: $primary;
+           }
+           > .image-wrapper {
+                &::after {
+                    opacity: .1;
+                }
+                img {
+                    transform: translate(-50%, -50%) scale(1.2);
+                }
+           }
+        }
+        .image-wrapper {
+            width: 100%;
+            height: 200px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            img{
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transition: .4s linear all;
+                transform: translate(-50%, -50%);
+            }
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 500px;
+                height: 500px;
+                opacity: 0;
+                background-color: $dark-blue;
+                transition: .3s linear all;
+            }
+        }
+        h3 {
+            display: inline;
+            background-image: linear-gradient($primary, $primary);
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: 0% 2px;
+            transition: background-size 500ms ease-in-out, color .5s linear;
+            font-weight: 600;
+        }
+    }
+}
+
+#announcements {
+    .wrapper {
+        margin-bottom: 100px;
+    }
+    .card {
+        width: calc(50% - 20px);
+        text-align: center;
+        display: none;
+        &:nth-child(1),
+        &:nth-child(2) {
+            display: inline-block;
+        }
+        .image-wrapper {
+            margin-bottom: 20px;
+        }
+        p {
+            padding-top: 10px;
+            margin-top: 10px;
+            border-top: 1px solid $grey;
+        }
+    }
+}
+
+@media screen and (min-width: 760px) {
+    #announcements {
+        .card {
+            width: calc(33% - 25px);
+            &:nth-child(3) {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    .cards-section {
+        .wrapper {
+            justify-content: space-between;
+        }
+    }
+    #announcements {
+        .card {
+            width: calc(25% - 30px);
+            &:nth-child(4) {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #announcements {
+        .card {
+            width: calc(20% - 32px);
+            &:nth-child(5) {
+                display: inline-block;
+            }
+        }
+    }
+}
