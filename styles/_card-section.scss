@@ -3,10 +3,8 @@
 .cards-section {
     .wrapper {
         display: flex;
-        justify-content: center;
         align-items: stretch;
         flex-wrap: wrap;
-        gap: 40px;
     }
     .card {
         display: inline-block;
@@ -64,6 +62,7 @@
             background-size: 0% 2px;
             transition: background-size 500ms ease-in-out, color .5s linear;
             font-weight: 600;
+            line-height: 125%;
         }
     }
 }
@@ -71,6 +70,8 @@
 #announcements {
     .wrapper {
         margin-bottom: 100px;
+        justify-content: center;
+        gap: 40px;
     }
     .card {
         width: 100%;
@@ -90,10 +91,48 @@
         }
     }
 }
+
+#news {
+    .container {
+        margin-bottom: 100px;
+    }
+    .wrapper {
+        justify-content: center;
+        margin-bottom: 60px;
+        gap: 20px;
+    }
+    p {
+        margin: 20px 0 10px;
+    }
+    .card {
+        width: 100%;
+        max-width: 450px;
+        min-width: 325px;
+        &:nth-child(n+3) {
+            display: none;
+        }
+    }
+    &.showMore {
+        .card {
+            &:nth-child(n+3) {
+                display: inline-block;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 450px) {
     #announcements {
         .card {
-            width: calc(50% - 20px);
+            width: calc(50% - 10px);
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #news {
+        .card {
+            width: calc(50% - 10px);
         }
     }
 }
@@ -123,6 +162,27 @@
             }
         }
     }
+    #news {
+        .wrapper {
+            justify-content: space-between;
+        }
+        .card {
+            width: calc(33% - 15px);
+            &:nth-child(n+3) {
+                display: inline-block;
+            }
+            &:nth-child(n+4) {
+                display: none;
+            }
+        }
+        &.showMore {
+            .card {
+                &:nth-child(n+4) {
+                    display: inline-block;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1600px) {
@@ -131,6 +191,27 @@
             width: calc(20% - 32px);
             &:nth-child(5) {
                 display: inline-block;
+            }
+        }
+    }
+    #news {
+        .wrapper {
+            justify-content: flex-start;
+        }
+        .card {
+            width: calc(25% - 15px);
+            &:nth-child(n+4) {
+                display: inline-block;
+            }
+            &:nth-child(n+5) {
+                display: none;
+            }
+        }
+        &.showMore {
+            .card {
+                &:nth-child(n+5) {
+                    display: inline-block;
+                }
             }
         }
     }

@@ -67,6 +67,7 @@ nav {
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
+                transition: all .2s linear;
             }
         }
     }
@@ -138,6 +139,8 @@ nav {
             position: absolute;
             bottom: 0;
             background-color: $white;
+            max-width: max-content;
+            transition: all linear .2s;
             li {
                 text-align: left;
                 line-height: 150%;
@@ -154,9 +157,18 @@ nav {
                     left: auto;
                 }
             }
+            &:has(.dropdown-menu:hover) {
+                > a {
+                    &::after {
+                        transform: rotate(180deg);
+                        top: 0;
+                    }
+                }
+            }
             .dropdown-menu {
-                background-color: black; //temp
-                display: none;
+                display: flex;
+                visibility: hidden;
+                opacity: 0;
                 max-height: none;
                 width: max-content;
                 max-width: 250px;
@@ -165,11 +177,15 @@ nav {
                 li {
                     padding: 10px 5px;
                 }
+                &:hover {
+                    visibility: visible;
+                    opacity: 1;
+                }
             }
             &.active {
                 > .dropdown-menu {
-                    display: flex;
-                    max-height: none;
+                    visibility: visible;
+                    opacity: 1;
                 }
             }
         }
@@ -182,6 +198,7 @@ nav {
             width: auto;
             height: auto;
             padding: 0;
+            overflow: visible;
             li {
                 width: auto;
                 a {
@@ -207,6 +224,9 @@ nav {
             padding: 15px 0;
         }
         .dropdown {
+            .dropdown-menu {
+                max-width: max-content;
+            }
             &:hover {
                 > .dropdown-menu {
                     max-width: max-content;

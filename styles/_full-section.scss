@@ -1,0 +1,107 @@
+@import "./variables";
+.full-width-section {
+    position: relative;
+    color: $text-light;
+    background: url(../images/bg.png) no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(90, 132, 237, 0.65); 
+        z-index: -1; 
+    }
+}
+
+#bigNums {
+    .container {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    dl {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        width: 100%;
+        justify-content: center;
+        > div {
+            min-width: 270px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:hover {
+                &::after {
+                    transform: translate(0, 0);
+                }
+            }
+            &::after {
+                content: "";
+                background: url(../images/Polygon2.png) no-repeat;
+                width: 140px;
+                height: 131px;
+                position: absolute;
+                z-index: -1;
+                transform: translate(10px, 10px);
+                transition: .6s all linear;
+            }
+        }
+        .polygon {
+            position: relative;
+            background: url(../images/Polygon\ 4.png) no-repeat;
+            width: 140px;
+            height: 131px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            transform: translate(-10px, -10px);
+            transition: .6s all linear;
+            z-index: 2;
+            &:hover {
+                transform: translate(0, 0);
+            }
+        }
+    }
+    dt {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    dd {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #bigNums {
+        dl {
+            justify-content: space-between;
+            > div {
+                width: calc(50% - 15px);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 760px) {
+    
+}
+
+@media screen and (min-width: 1170px) {
+    #bigNums {
+        dl {
+            gap: 20px;
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    
+}
