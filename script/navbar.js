@@ -6,7 +6,7 @@ const navList = document.querySelector('.nav-links');
 const navLinks = document.querySelectorAll('.nav-links li');
 const icon = document.querySelector('.burger-icon');
 const topbar = document.querySelector(".topbar");
-const elements = document.querySelectorAll(".margin-top");
+const elements = document.querySelectorAll(".move-el");
 const screenWidth = window.innerWidth;
 let lastScrollY =  window.scrollY;
 
@@ -42,3 +42,26 @@ window.addEventListener("scroll", () => {
 
     lastScrollY = window.scrollY;
   });
+
+const dropdowns = document.querySelectorAll('.nav-links li.dropdown');
+
+if (dropdowns) {
+    dropdowns.forEach((item) => {
+        item.addEventListener("click", () => {
+            dropdowns.forEach((otherItem) => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove("active");
+                }
+            });
+            item.classList.toggle("active");
+        });
+    });
+}
+
+document.addEventListener("click", (event) => {
+    dropdowns.forEach((item) => {
+        if (!item.contains(event.target)) {
+            item.classList.remove("active");
+        }
+    });
+});
