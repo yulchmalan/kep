@@ -924,6 +924,8 @@ section:not(.hero-section) h2 {
 .margin-top {
   -webkit-transition: all linear 0.6s;
   transition: all linear 0.6s;
+  -webkit-transform: translateY(130px);
+          transform: translateY(130px);
 }
 
 .font-size {
@@ -1059,6 +1061,10 @@ section:not(.hero-section) h2 {
   .font-size {
     font-size: 1.5rem;
   }
+  .margin-top {
+    -webkit-transform: translateY(160px);
+            transform: translateY(160px);
+  }
   .btn {
     padding: 20px 40px;
   }
@@ -1086,6 +1092,10 @@ section:not(.hero-section) h2 {
 @media screen and (min-width: 1170px) {
   .container {
     padding: 0;
+  }
+  .margin-top {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
   }
 }
 @media screen and (min-width: 1600px) {

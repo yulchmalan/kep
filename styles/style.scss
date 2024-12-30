@@ -42,6 +42,7 @@ section:not(.hero-section) {
 
 .margin-top {
     transition: all linear .6s;
+    transform: translateY(130px);
 }
 
 .font-size {
@@ -181,6 +182,9 @@ section:not(.hero-section) {
     .font-size {
         font-size: 1.5rem;
     }
+    .margin-top {
+        transform: translateY(160px);
+    }
     .btn {
         padding: 20px 40px;
     }
@@ -235,6 +239,9 @@ section:not(.hero-section) {
 @media screen and (min-width: 1170px) {
     .container { 
         padding: 0;
+    }
+    .margin-top {
+        transform: translateY(100px);
     }
 }
 
