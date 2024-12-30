@@ -299,7 +299,8 @@
           transform: translateY(-80px);
 }
 .topbar-hidden + nav {
-  top: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 @media screen and (min-width: 520px) {
@@ -352,7 +353,8 @@ header {
 
 nav {
   position: fixed;
-  top: 136px;
+  -webkit-transform: translateY(136px);
+          transform: translateY(136px);
   left: 0;
   right: 0;
   background-color: #fbfbfb;
