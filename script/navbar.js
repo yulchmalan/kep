@@ -32,11 +32,11 @@ window.addEventListener("scroll", () => {
 
     elements.forEach(element => {
         if (screenWidth <= 1024) {
-            element.style.marginTop = isTopbarVisible ? "130px" : "0px";
+            element.style.transform = `translateY(${isTopbarVisible ? "130px" : "0px"})`;
         } else if (screenWidth <= 1170) {
-            element.style.marginTop = isTopbarVisible ? "160px" : "30px";
+            element.style.transform = `translateY(${isTopbarVisible ? "160px" : "30px"})`;
         } else {
-            element.style.marginTop = isTopbarVisible ? "100px" : "40px";
+            element.style.transform = `translateY(${isTopbarVisible ? "100px" : "40px"})`;
         }
     });
 

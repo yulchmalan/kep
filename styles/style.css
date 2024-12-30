@@ -449,7 +449,7 @@ nav .nav-links {
           align-items: flex-end;
   height: calc(100vh - 80px);
   width: 100%;
-  top: 80px;
+  top: 78px;
   right: 0;
   row-gap: 40px;
   background-color: #fbfbfb;
@@ -599,7 +599,8 @@ nav .burger {
 }
 @media screen and (min-width: 1170px) {
   nav {
-    top: 80px;
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
   }
 }
 :root {
