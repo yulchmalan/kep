@@ -919,7 +919,6 @@ section:not(.hero-section) h2 {
 }
 
 .margin-top {
-  margin-top: 135px;
   -webkit-transition: all linear 0.6s;
   transition: all linear 0.6s;
 }
@@ -1054,9 +1053,6 @@ section:not(.hero-section) h2 {
   section:not(.hero-section) h2 {
     font-size: 3rem;
   }
-  .margin-top {
-    margin-top: 160px;
-  }
   .font-size {
     font-size: 1.5rem;
   }
@@ -1087,9 +1083,6 @@ section:not(.hero-section) h2 {
 @media screen and (min-width: 1170px) {
   .container {
     padding: 0;
-  }
-  .margin-top {
-    margin-top: 100px;
   }
 }
 @media screen and (min-width: 1600px) {
