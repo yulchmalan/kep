@@ -28,10 +28,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
+        justify-content: space-between;
         width: 100%;
-        justify-content: center;
         > div {
-            min-width: 270px;
+            width: calc(50% - 15px);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -40,11 +40,12 @@
                     transform: translate(0, 0);
                 }
             }
+            
             &::after {
                 content: "";
-                background: url(../images/Polygon2.png) no-repeat;
-                width: 140px;
-                height: 131px;
+                background: url(../images/Polygon4.png) no-repeat;
+                width: 112px;
+                height: 105px;
                 position: absolute;
                 z-index: -1;
                 transform: translate(10px, 10px);
@@ -53,9 +54,9 @@
         }
         .polygon {
             position: relative;
-            background: url(../images/Polygon\ 4.png) no-repeat;
-            width: 140px;
-            height: 131px;
+            background: url(../images/Polygon3.png) no-repeat;
+            width: 112px;
+            height: 105px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -69,12 +70,12 @@
         }
     }
     dt {
-        font-size: 3rem;
-        font-weight: 600;
+        font-size: 2rem;
+        font-weight: 500;
     }
     dd {
-        font-size: 2rem;
-        font-weight: 600;
+        font-size: 1rem;
+        font-weight: 500;
     }
 }
 
@@ -83,7 +84,7 @@
         dl {
             justify-content: space-between;
             > div {
-                width: calc(50% - 15px);
+                width: calc(25% - 23px);
             }
         }
     }
@@ -98,6 +99,26 @@
         dl {
             gap: 20px;
             flex-wrap: nowrap;
+            > div {
+                &::after {
+                    background: url(../images/Polygon2.png) no-repeat;
+                    width: 140px;
+                    height: 131px;
+                }
+            }
+            .polygon {
+                background: url(../images/Polygon\ 4.png) no-repeat;
+                width: 140px;
+                height: 131px;
+            }
+        }
+        dt {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+        dd {
+            font-size: 2rem;
+            font-weight: 600;
         }
     }
 }

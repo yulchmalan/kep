@@ -189,6 +189,10 @@ section:not(.hero-section) {
     }
 }
 
+.icon-lg {
+    display: none;
+}
+
 @media screen and (min-width: 1024px) {
     section:not(.hero-section) h2 {
         font-size: 3rem;
@@ -256,6 +260,12 @@ section:not(.hero-section) {
     }
     .move-el {
         transform: translateY(100px);
+    }
+    .icon-sm {
+        display: none;
+    }
+    .icon-lg {
+        display: block;
     }
 }
 

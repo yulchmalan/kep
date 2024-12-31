@@ -96,27 +96,21 @@
     .container {
         margin-bottom: 100px;
     }
-    .wrapper {
-        justify-content: center;
-        margin-bottom: 60px;
-        gap: 20px;
-    }
     p {
         margin: 20px 0 10px;
     }
-    .card {
+    .wrapper{
         width: 100%;
-        max-width: 450px;
-        min-width: 325px;
-        &:nth-child(n+3) {
-            display: none;
-        }
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-gap: 20px;
+        justify-content: center;
+        margin-bottom: 60px;
     }
-    &.showMore {
-        .card {
-            &:nth-child(n+3) {
-                display: inline-block;
-            }
+    .card {
+        padding-bottom: 20px;
+        &.hidden {
+            display: none;
         }
     }
 }
@@ -129,10 +123,10 @@
     }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
     #news {
-        .card {
-            width: calc(50% - 10px);
+        .wrapper{
+            grid-template-columns: repeat(auto-fit, calc(50% - 10px));
         }
     }
 }
@@ -163,24 +157,11 @@
         }
     }
     #news {
-        .wrapper {
-            justify-content: space-between;
-        }
-        .card {
-            width: calc(33% - 15px);
-            &:nth-child(n+3) {
-                display: inline-block;
-            }
-            &:nth-child(n+4) {
-                display: none;
-            }
-        }
-        &.showMore {
-            .card {
-                &:nth-child(n+4) {
-                    display: inline-block;
-                }
-            }
+        .wrapper{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(325px, 32%));
+            grid-gap: 20px;
+            justify-content: center;
         }
     }
 }
@@ -191,27 +172,6 @@
             width: calc(20% - 32px);
             &:nth-child(5) {
                 display: inline-block;
-            }
-        }
-    }
-    #news {
-        .wrapper {
-            justify-content: flex-start;
-        }
-        .card {
-            width: calc(25% - 15px);
-            &:nth-child(n+4) {
-                display: inline-block;
-            }
-            &:nth-child(n+5) {
-                display: none;
-            }
-        }
-        &.showMore {
-            .card {
-                &:nth-child(n+5) {
-                    display: inline-block;
-                }
             }
         }
     }

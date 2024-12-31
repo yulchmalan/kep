@@ -873,26 +873,24 @@ nav .burger {
 #news .container {
   margin-bottom: 100px;
 }
+#news p {
+  margin: 20px 0 10px;
+}
 #news .wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  grid-gap: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 60px;
-  gap: 20px;
-}
-#news p {
-  margin: 20px 0 10px;
 }
 #news .card {
-  width: 100%;
-  max-width: 450px;
-  min-width: 325px;
+  padding-bottom: 20px;
 }
-#news .card:nth-child(n+3) {
+#news .card.hidden {
   display: none;
-}
-#news.showMore .card:nth-child(n+3) {
-  display: inline-block;
 }
 
 @media screen and (min-width: 450px) {
@@ -900,9 +898,9 @@ nav .burger {
     width: calc(50% - 10px);
   }
 }
-@media screen and (min-width: 700px) {
-  #news .card {
-    width: calc(50% - 10px);
+@media screen and (min-width: 600px) {
+  #news .wrapper {
+    grid-template-columns: repeat(auto-fit, calc(50% - 10px));
   }
 }
 @media screen and (min-width: 760px) {
@@ -926,21 +924,12 @@ nav .burger {
     display: inline-block;
   }
   #news .wrapper {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  #news .card {
-    width: calc(33% - 15px);
-  }
-  #news .card:nth-child(n+3) {
-    display: inline-block;
-  }
-  #news .card:nth-child(n+4) {
-    display: none;
-  }
-  #news.showMore .card:nth-child(n+4) {
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 32%));
+    grid-gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media screen and (min-width: 1600px) {
@@ -948,23 +937,6 @@ nav .burger {
     width: calc(20% - 32px);
   }
   #announcements .card:nth-child(5) {
-    display: inline-block;
-  }
-  #news .wrapper {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  #news .card {
-    width: calc(25% - 15px);
-  }
-  #news .card:nth-child(n+4) {
-    display: inline-block;
-  }
-  #news .card:nth-child(n+5) {
-    display: none;
-  }
-  #news.showMore .card:nth-child(n+5) {
     display: inline-block;
   }
 }
@@ -999,13 +971,13 @@ nav .burger {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 #bigNums dl > div {
-  min-width: 270px;
+  width: calc(50% - 15px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1023,9 +995,9 @@ nav .burger {
 }
 #bigNums dl > div::after {
   content: "";
-  background: url(../images/Polygon2.png) no-repeat;
-  width: 140px;
-  height: 131px;
+  background: url(../images/Polygon4.png) no-repeat;
+  width: 112px;
+  height: 105px;
   position: absolute;
   z-index: -1;
   -webkit-transform: translate(10px, 10px);
@@ -1035,9 +1007,9 @@ nav .burger {
 }
 #bigNums dl .polygon {
   position: relative;
-  background: url(../images/Polygon\ 4.png) no-repeat;
-  width: 140px;
-  height: 131px;
+  background: url(../images/Polygon3.png) no-repeat;
+  width: 112px;
+  height: 105px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1059,12 +1031,12 @@ nav .burger {
           transform: translate(0, 0);
 }
 #bigNums dt {
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 500;
 }
 #bigNums dd {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 600px) {
@@ -1074,7 +1046,7 @@ nav .burger {
             justify-content: space-between;
   }
   #bigNums dl > div {
-    width: calc(50% - 15px);
+    width: calc(25% - 23px);
   }
 }
 @media screen and (min-width: 1170px) {
@@ -1082,6 +1054,24 @@ nav .burger {
     gap: 20px;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+  #bigNums dl > div::after {
+    background: url(../images/Polygon2.png) no-repeat;
+    width: 140px;
+    height: 131px;
+  }
+  #bigNums dl .polygon {
+    background: url(../images/Polygon\ 4.png) no-repeat;
+    width: 140px;
+    height: 131px;
+  }
+  #bigNums dt {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  #bigNums dd {
+    font-size: 2rem;
+    font-weight: 600;
   }
 }
 * {
@@ -1263,6 +1253,10 @@ section:not(.hero-section) h2 {
           transform: translateY(-45%);
 }
 
+.icon-lg {
+  display: none;
+}
+
 @media screen and (min-width: 1024px) {
   section:not(.hero-section) h2 {
     font-size: 3rem;
@@ -1305,6 +1299,12 @@ section:not(.hero-section) h2 {
   .move-el {
     -webkit-transform: translateY(100px);
             transform: translateY(100px);
+  }
+  .icon-sm {
+    display: none;
+  }
+  .icon-lg {
+    display: block;
   }
 }
 @media screen and (min-width: 1600px) {
