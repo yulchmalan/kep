@@ -363,6 +363,9 @@ nav {
   transition: all 0.6s linear;
   font-size: 20px;
 }
+nav span {
+  pointer-events: none;
+}
 nav * {
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

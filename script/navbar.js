@@ -51,7 +51,7 @@ const eventType = screenWidth < 1024 ? 'click' : 'mouseover';
 
 if (dropdowns) {
     dropdowns.forEach((item) => {
-        item.addEventListener(eventType, () => {
+        item.addEventListener("click", () => {
             dropdowns.forEach((otherItem) => {
                 if (otherItem !== item) {
                     otherItem.classList.remove("active");
