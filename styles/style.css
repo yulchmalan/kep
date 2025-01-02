@@ -400,18 +400,19 @@ nav .dropdown-menu li {
 }
 nav .dropdown {
   position: relative;
+  cursor: pointer;
 }
 nav .dropdown.active > .dropdown-menu {
   max-height: 500px;
 }
-nav .dropdown.active > a i {
+nav .dropdown.active > a i, nav .dropdown.active span i {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   top: 0;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-nav .dropdown > a {
+nav .dropdown > a, nav .dropdown span {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -420,7 +421,7 @@ nav .dropdown > a {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-nav .dropdown > a i {
+nav .dropdown > a i, nav .dropdown span i {
   font-size: 15px;
 }
 nav .nav-links {
@@ -461,13 +462,13 @@ nav .nav-links.nav-active {
 nav .nav-links > li {
   text-align: right;
 }
-nav .nav-links a {
+nav .nav-links a, nav .nav-links span {
   text-decoration: none;
   color: #141414;
   display: inline-block;
   -webkit-tap-highlight-color: transparent;
 }
-nav .nav-links a.active {
+nav .nav-links a.active, nav .nav-links span.active {
   color: #5a83ed;
 }
 nav .logo {
@@ -521,10 +522,10 @@ nav .burger {
     border-right: none;
     border-top: 1px solid #D4D4D4;
   }
-  nav .dropdown > a {
+  nav .dropdown > span {
     position: relative;
   }
-  nav .dropdown:has(.dropdown-menu:hover) > a i {
+  nav .dropdown:has(.dropdown-menu:hover) > span i {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
   }
@@ -572,7 +573,7 @@ nav .burger {
   nav .nav-links li {
     width: auto;
   }
-  nav .nav-links li a {
+  nav .nav-links li a, nav .nav-links li span {
     width: auto;
     pointer-events: all;
   }
@@ -1229,8 +1230,8 @@ nav .burger {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  -webkit-animation: scroll 20s var(--animation-direction, forwards) linear infinite;
-          animation: scroll 20s var(--animation-direction, forwards) linear infinite;
+  -webkit-animation: scroll 30s var(--animation-direction, forwards) linear infinite;
+          animation: scroll 30s var(--animation-direction, forwards) linear infinite;
 }
 
 @-webkit-keyframes scroll {
