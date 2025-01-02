@@ -363,6 +363,10 @@ nav {
   transition: all 0.6s linear;
   font-size: 20px;
 }
+nav * {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 nav .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -426,7 +430,7 @@ nav .dropdown > a i, nav .dropdown span i {
 }
 nav .nav-links {
   position: absolute;
-  max-width: 500px;
+  max-width: 400px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -522,7 +526,7 @@ nav .burger {
     border-right: none;
     border-top: 1px solid #D4D4D4;
   }
-  nav .dropdown > span {
+  nav .dropdown > span, nav .dropdown a {
     position: relative;
   }
   nav .dropdown:has(.dropdown-menu:hover) > span i {
