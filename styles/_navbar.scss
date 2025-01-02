@@ -32,11 +32,10 @@ nav {
         background-color: $white;
         transition: all linear .6s;
         z-index: 10; 
-        border-radius: 0 0 20px 20px;
         li {
             text-align: right;
             line-height: 150%;
-            padding: 10px 30px 10px 10px;
+            padding: 10px 20px 10px 10px;
             border-right: 1px solid $border;
         }
     }
@@ -47,27 +46,19 @@ nav {
                 max-height: 500px;
             }
             > a {
-                &::after {
+                i {
                     transform: rotate(180deg);
                     top: 0;
+                    transition: all .2s linear;
                 }
             }
         }
         > a {
             position: relative;
-            padding-left: 20px;
-            &::after {
-                content: "";
-                background-image: url('../images/sprites.png');
-                background-position: -96px -25px;
-                display: block;
-                width: 20px;
-                height: 20px;
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                transition: all .2s linear;
+            display: flex;
+            align-items: flex-start;
+            i {
+                font-size: 15px;
             }
         }
     }
@@ -137,7 +128,7 @@ nav {
     nav {
         .dropdown-menu {
             position: absolute;
-            bottom: 0;
+            bottom: -20px;
             background-color: $white;
             max-width: max-content;
             transition: all linear .2s;
@@ -145,23 +136,17 @@ nav {
                 text-align: left;
                 line-height: 150%;
                 border-right: none;
+                border-top: 1px solid $border;
             }
         }
         .dropdown {
             > a {
-                padding-right: 20px;
-                padding-left: 0;
                 position: relative;
-                &::after {
-                    right: 0;
-                    left: auto;
-                }
             }
             &:has(.dropdown-menu:hover) {
                 > a {
-                    &::after {
+                    i {
                         transform: rotate(180deg);
-                        top: 0;
                     }
                 }
             }
@@ -172,10 +157,9 @@ nav {
                 max-height: none;
                 width: max-content;
                 max-width: 250px;
-                padding: 10px;
-                left: -15px;
+                left: 0;
                 li {
-                    padding: 10px 5px;
+                    padding: 10px 20px;
                 }
                 &:hover {
                     visibility: visible;

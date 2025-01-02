@@ -27,7 +27,7 @@
         overflow: hidden;
         z-index: 1;
         padding: 60px 30px;
-        aspect-ratio: 1 / 1.5;
+        aspect-ratio: 1 / 1.8;
         display: flex;
         align-items: center;
         .content {
@@ -38,7 +38,8 @@
             > div {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 25px;
+                column-gap: 25px;
+                row-gap: 10px;
             }
         }
         .image-wrapper {
@@ -73,11 +74,10 @@
         height: 64px;
         background-color: #fbfbfb7d;
         border-radius: 50%;
+        font-size: 2rem;
         &::after {
             content: "";
-            background: url('../images/sprites.png') -0 -0;
-            width: 48px;
-            height: 48px;
+            position: absolute;
         }
     }
     .swiper-button-next {
@@ -88,11 +88,10 @@
         height: 64px;
         border-radius: 50%;
         background-color: #fbfbfb7d;
+        font-size: 2rem;
         &::after {
             content: "";
-            background: url('../images/sprites.png') -48px -0;
-            width: 48px;
-            height: 48px;
+            position: absolute;
         }
     }
     .swiper-button-prev, .swiper-button-next{

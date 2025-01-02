@@ -9,9 +9,9 @@ const swiperJumbo = new Swiper('.swiper-hero', {
       prevEl: '.hero-prev',
     },
   
-    autoplay: {
-      delay: 5000,
-    },
+    // autoplay: {
+    //   delay: 5000,
+    // },
   
     slidesPerView: 1,
   });

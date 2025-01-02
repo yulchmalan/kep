@@ -1,0 +1,100 @@
+@import "./variables";
+
+footer {
+    position: relative;
+    color: $text-light;
+    background-color: $primary;
+    padding: 50px 0;
+    overflow-x: hidden;
+    p {
+        font-weight: 600;
+    }
+    a {
+        color: inherit;
+        line-height: 150%;
+    }
+    * {
+        &::selection {
+            background-color: $white;
+            color: $primary;
+        }
+    }
+    .font-size {
+        &::selection {
+            background-color: $white;
+            color: $primary;
+        }
+    }
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    i {
+        font-size: 2rem;
+        margin-right: 5px;
+    }
+    > div {
+        display: flex;
+        flex-direction: column;
+        p {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        a {
+            padding-left: 32px;
+        }
+    }
+}
+
+.footer-bottom {
+    position: relative;
+    width: calc(100% + 80px);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px 40px;
+    align-items: center;
+    border-top: 2px solid #fbfbfb44;
+    border-bottom: 2px solid #fbfbfb44;
+    > div {
+        display: flex;
+        gap: 16px;
+        > div {
+            border-radius: 50%;
+            background-color: $white;
+            width: 3rem;
+            height: 3rem;
+            text-align: center;
+        }
+    }
+    i {
+        font-size: calc(3rem - 20px);
+        color: $primary;
+        line-height: 3rem;
+    }
+}
+
+@media screen and (min-width: 835px) {
+    footer {
+        padding: 64px 0;
+    }
+    .footer-top {
+        flex-direction: row;
+        gap: 54px;
+    }
+    .footer-bottom {
+        > div {
+            gap: 28px;
+        }
+    }
+}

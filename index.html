@@ -10,38 +10,6 @@
     <title>kepska strona</title>
   </head>
   <body>
-    <!-- <div class="gradient-bg">
-      <svg xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
-        <feTurbulence type="fractalNoise" baseFrequency="0.155" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence>
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo"/>
-            <feBlend in="SourceGraphic" in2="goo" />
-          </filter>
-        </defs>
-      </svg>
-      <div class="gradients-container">
-        <div class="g1"></div>
-        <div class="g2"></div>
-        <div class="g3"></div>
-        <div class="g4"></div>
-        <div class="g5"></div>
-        <div class="interactive"></div>
-      </div>
-      <svg class="noise" viewBox='0 0 5900 1900' xmlns='http://www.w3.org/2000/svg'>
-        <filter id='noiseFilter'>
-          <feTurbulence 
-            type='fractalNoise' 
-            baseFrequency='7' 
-            numOctaves='2' 
-            stitchTiles='stitch'/>
-        </filter>
-        
-        <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
-      </svg>
-      
-    </div> -->
     <header>
         <address class="topbar">
             <div class="container">
@@ -57,8 +25,8 @@
                 <div class="tel">
                     <i class="fa-solid fa-phone-volume"></i>
                     <div>
-                        <a href="tel:+380342783046">0342783046</a>
-                        <a href="tel:+380342783022">0342783022</a>
+                        <a href="tel:0342783046">0342783046</a>
+                        <a href="tel:0342783022">0342783022</a>
                     </div>
                 </div>
               </div>
@@ -69,7 +37,7 @@
             <a href="index.html" class="logo"><img src="images/logo.png" alt="Логотип Коледжу електронних приладів"> </a>
             <ul class="nav-links">
               <li><a href="index.html" class="active">Головна</a></li>
-              <li class="dropdown"><a href="#">Про коледж</a>
+              <li class="dropdown"><a href="#">Про коледж <i class="fa-solid fa-chevron-down"></i></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Дирекція</a></li>
                   <li><a href="#">Циклові комісії</a></li>
@@ -79,20 +47,20 @@
                   <li><a href="#">Нормативно-правова база</a></li>
                 </ul>
               </li>
-              <li class="dropdown"><a href="#">Студентам</a>
+              <li class="dropdown"><a href="#">Студентам <i class="fa-solid fa-chevron-down"></i></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Розклад</a></li>
                   <li><a href="#">Студенське самоврядування</a></li>
                 </ul>
               </li>
-              <li class="dropdown"><a href="#">Вступнику</a>
+              <li class="dropdown"><a href="#">Вступнику <i class="fa-solid fa-chevron-down"></i></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Підготовчі курси</a></li>
                   <li><a href="#">Правила прийому та інші нормативні документи</a></li>
                   <li><a href="#">Програма вступних випробувань</a></li>
                 </ul>
               </li>
-              <li class="dropdown"><a href="#">Викладачам</a>
+              <li class="dropdown"><a href="#">Викладачам <i class="fa-solid fa-chevron-down"></i></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Графік навчального процесу</a></li>
                   <li><a href="#">Освітньо-професійні програми</a></li>
@@ -112,9 +80,9 @@
     <main class="move-el">
       <section class="hero-section swiper-section" id="hero-section">
         <div class="swiper-hero">
-            <div class="swiper-button-prev hero-prev"></div>
+            <div class="swiper-button-prev hero-prev"><i class="fa-solid fa-chevron-left"></i></div>
             <div class="swiper-pagination hero-pag"></div>
-            <div class="swiper-button-next hero-next"></div>
+            <div class="swiper-button-next hero-next"><i class="fa-solid fa-chevron-right"></i></div>
             <div class="swiper-wrapper">                    
                 <div class="swiper-slide">
                   <div class="image-wrapper"><img src="images/swiper/1.jpg" alt="Зображення студентів"></div>
@@ -123,8 +91,8 @@
                     <h2>ВСП "Фаховий коледж електронних приладів ІФНТУНГ"</h2>
                     <p class="font-size">Це сучасний заклад освіти, в якому створено всі умови для підготовки фахових молодших бакалаврів конкурентоспроможних на сучасному ринку праці</p>
                     <div>
-                      <a class="btn btn-primary btn-icon" href="#"><span class="font-size">Про нас</span></a>
-                      <a class="btn btn-secondary btn-icon" href="#"><span class="font-size">Вступ</span></a>
+                      <a class="btn btn-primary font-size" href="#"><span>Про нас<i class="fa-solid fa-arrow-right"></i></span></a>
+                      <a class="btn btn-secondary font-size" href="#"><span>Вступ<i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                   </div>
                 </div>
@@ -134,7 +102,7 @@
                     <h2>121 Інженерія програмного забезпечення</h2>
                     <p class="font-size">Спеціальність формує професійні компетенції з проектування, реалізації, впровадження та супроводу програмного забезпечення в сфері сучасних IT-технологій</p>
                     <div>
-                      <a class="btn btn-primary btn-icon" href="#"><span class="font-size">Про напрям</span></a>
+                      <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                   </div>
                 </div>
@@ -144,7 +112,7 @@
                     <h2>151 Автоматизація та комп’ютерно інтегровані технології</h2>
                     <p class="font-size">Дає можливості стати висококваліфікованим ІТ-фахівцем, який вмітиме забезпечувати функціонування систем автоматизації та комп’ютерної техніки в різних галузях  людської діяльності</p>
                     <div>
-                      <a class="btn btn-primary btn-icon" href="#"><span class="font-size">Про напрям</span></a>
+                      <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                   </div>
                 </div>
@@ -154,7 +122,7 @@
                     <h2>123 Комп’ютерна інженерія</h2>
                     <p class="font-size">Це унікальна спеціальність, що дозволяє отримати знання у галузі комп'ютерних мережевих технологій, комп'ютерної техніки та програмної інженерії</p>
                     <div>
-                      <a class="btn btn-primary btn-icon" href="#"><span class="font-size">Про напрям</span></a>
+                      <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                   </div>
                 </div>
@@ -164,7 +132,7 @@
                     <h2>152 Метрологія та інформаційно-вимірювальна техніка</h2>
                     <p class="font-size">Спецільність формує професійні компетенції з проєктування інтелектуальних приладів та вимірювальних систем, їх програмного і метрологічного забезпечення</p>
                     <div>
-                      <a class="btn btn-primary btn-icon" href="#"><span class="font-size">Про напрям</span></a>
+                      <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                   </div>
                 </div>
@@ -174,7 +142,7 @@
                     <h2>072 Фінанси, банківська справа та страхування</h2>
                     <p class="font-size">Спеціальність формує  загальні і професійні компетенції планово-економічної, організаційно-управлінської, аналітичної роботи у сфері фінансів, банківської справи та страхування</p>
                     <div>
-                      <a class="btn btn-primary btn-icon" href="#"><span class="font-size">Про напрям</span></a>
+                      <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                   </div>
                 </div>
@@ -184,7 +152,7 @@
                     <h2>076 Підприємництво, торгівля та біржова діяльність</h2>
                     <p class="font-size">Спеціальність забезпечує підготовку фахівців, які за вимогами сучасного ринку праці зможуть  планувати та організовувати підприємницьку і торгівельну діяльності, здійснювати операції на товарних біржах</p>
                     <div>
-                      <a class="btn btn-primary btn-icon" href="#"><span class="font-size">Про напрям</span></a>
+                      <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                   </div>
                 </div>
@@ -194,7 +162,7 @@
                     <h2>171 Електроніка</h2>
                     <p class="font-size">Спеціальність формує професійні компетенції з проектування, реалізації, впровадження та обслуговування радіоелектронних пристроїв в різноманітних сферах</p>
                     <div>
-                      <a class="btn btn-primary btn-icon" href="#"><span class="font-size">Про напрям</span></a>
+                      <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                   </div>
                 </div>
@@ -204,7 +172,7 @@
                     <h2>172 Телекомунікації та радіотехніка</h2>
                     <p class="font-size">Мобільний і супутниковий зв'язок, радіомовлення і телебачення, комп'ютерні та інформаційні системи, інтернет існують і розвиваються завдяки саме телекомунікаційним системам</p>
                     <div>
-                      <a class="btn btn-primary btn-icon" href="#"><span class="font-size">Про напрям</span></a>
+                      <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                   </div>
                 </div>
@@ -214,7 +182,7 @@
                     <h2>131 Прикладна механіка</h2>
                     <p class="font-size">Спеціальність для тих, хто прагне проектувати нові зразки робототехнічних систем з використанням найсучасніших програм, інженерних систем автоматизованого проєктування та систем 3D-моделювання</p>
                     <div>
-                      <a class="btn btn-primary btn-icon" href="#"><span class="font-size">Про напрям</span></a>
+                      <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                   </div>
                 </div>
@@ -224,7 +192,7 @@
                     <h2>Підготовчі курси</h2>
                     <p class="font-size">ВСП "Фаховий коледж електронних приладів ІФНТУНГ" запрошує учнів 9-х та 11-х класів на підготовчі курси, які дозволять отримати додатково 50 балів  до рейтингу та збільшити свої шанси при вступі (Щоб перейти на форму для реєстрації тисніть на слайдер)</p>
                     <div>
-                      <a class="btn btn-primary btn-icon" href="#"><span class="font-size">Про напрям</span></a>
+                      <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                   </div>
                 </div>
@@ -371,7 +339,7 @@
             <p>Запрошуємо на навчання</p>
             <h2>Інформація для вступників</h2>
           </div>
-          <a class="btn btn-secondary btn-icon" href="#"><span class="font-size">Дізнатися більше</span></a>
+          <a class="btn btn-secondary" href="#"><span class="font-size">Дізнатися більше</span></a>
         </div>
       </section>
       <section class="cards-section" id="events">
@@ -464,6 +432,36 @@
         </div>
       </section>
     </main>
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <p class="font-size"><i class="fa-solid fa-location-dot"></i>Адреса:</p>
+            <a href="https://maps.app.goo.gl/C75wGNHST8XtxAoP6">вул. Вовчинецька, <br> 223 м. Івано-Франківськ, 76006</a>
+          </div>
+          <div>
+            <p class="font-size"><i class="fa-solid fa-phone-volume"></i>Приймальня директора:</p>
+            <a href="tel:0342783046">(0342) 78-30-46,</a>
+            <a href="tel:0342783022">(0342) 78-30-22,</a>
+            <a href="mailto:ifkep@ukr.net">ifkep@ukr.net</a>
+          </div>
+          <div>
+            <p class="font-size"><i class="fa-solid fa-phone-volume"></i>Приймальна комісія:</p>
+            <a href="tel:0342565700">(0342) 56-57-00,</a>
+            <a href="tel:0688263546">(068) 826-35-46,</a>
+            <a href="tel:0993754783">(099) 375-47-83</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="font-size">Всі права захищені &copy;<span id="currentYear"></span></p>
+          <div>
+            <div><a href=""><i class="fa-brands fa-facebook"></i></a></div>
+            <div><a href=""><i class="fa-brands fa-telegram"></i></a></div>
+            <div><a href=""><i class="fa-brands fa-viber"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script/navbar.js"></script>
     <script src="script/script.js" defer></script>
