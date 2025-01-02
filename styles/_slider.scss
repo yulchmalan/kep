@@ -1,0 +1,116 @@
+@import "./variables";
+
+.slide[data-animated="true"] {
+    overflow: hidden;
+  }
+  .slide[data-direction="right"] {
+    --animation-direction: reverse;
+  }
+  
+  .slide[data-direction="left"] {
+    --animation-direction: forwards;
+  }
+  
+  .slide[data-animated="true"] .wrapper {
+    width: max-content;
+    animation: scroll 20s var(--animation-direction, forwards) linear infinite;
+  }
+  
+  
+  
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+
+.slider-section {
+    position: relative;
+    h2 {
+        margin-bottom: 32px;
+        margin-top: 100px;
+        color: $text-dark;
+    }
+    .wrapper {
+        gap: 32px;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+    }
+    .square-card  {
+        width: calc(25%);
+        min-width: 200px;
+        max-width: 250px;
+        min-height: 100px;
+        max-height: 150px;
+    }
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.square-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        
+    img {
+        max-height: 80%;
+        max-width: 75%;
+    }
+    &:nth-child(14n + 1) {
+        background-color: #32315D; 
+    }
+    &:nth-child(14n + 2) {
+        background-color: #FFFFFF; 
+    }
+    &:nth-child(14n + 3) {
+        background-color: #141414; 
+    }
+    &:nth-child(14n + 4) {
+        background-color: #FFFFFF; 
+    }
+    &:nth-child(14n + 5) {
+        background-color: #01011e; 
+    }
+    &:nth-child(14n + 6) {
+        background-color: #21aae6; 
+    }
+    &:nth-child(14n + 7) {
+        background-color: #fafafa; 
+    }
+    &:nth-child(14n + 8) {
+        background-color: #2a4f70; 
+    }
+    &:nth-child(14n + 9) {
+        background-color: #FFFFFF; 
+    }
+    &:nth-child(14n + 10) {
+        background-color: #fafafa; 
+    }
+    &:nth-child(14n + 11) {
+        background-color: #fcfcfc; 
+    }
+    &:nth-child(14n + 12) {
+        background-color: #212121; 
+    }
+    &:nth-child(14n + 13) {
+        background-color: #fafafa; 
+    }
+    &:nth-child(14n + 14) {
+        background-color: #fcfcfc; 
+    }
+}
+
+@media screen and (min-width: 890px) {
+    .slider-section {
+        .square-card {
+            min-width: 280px;
+            min-height: 170px;
+        }
+    }
+}

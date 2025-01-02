@@ -39,6 +39,9 @@
                 &::after {
                     transform: translate(0, 0);
                 }
+                .polygon {
+                    transform: translate(0, 0);
+                }
             }
             
             &::after {
@@ -64,9 +67,7 @@
             transform: translate(-10px, -10px);
             transition: .6s all linear;
             z-index: 2;
-            &:hover {
-                transform: translate(0, 0);
-            }
+            
         }
     }
     dt {
@@ -76,6 +77,27 @@
     dd {
         font-size: 1rem;
         font-weight: 500;
+    }
+}
+
+#moreInfo {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 64px;
+        padding-bottom: 64px;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    .content {
+        text-align: center;
+    }
+    p {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        font-weight: 600;
     }
 }
 
@@ -119,6 +141,17 @@
         dd {
             font-size: 2rem;
             font-weight: 600;
+        }
+    }
+    #moreInfo {
+        .container {
+            flex-direction: row;
+        }
+        .content {
+            text-align: left;
+        }
+        p {
+            font-size: 2rem;
         }
     }
 }

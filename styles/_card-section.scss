@@ -1,7 +1,13 @@
 @import "./variables";
 
 .cards-section {
+    h2 {
+        margin-bottom: 32px;
+        margin-top: 100px;
+        color: $text-dark;
+    }
     .wrapper {
+        width: 100%;
         display: flex;
         align-items: stretch;
         flex-wrap: wrap;
@@ -115,12 +121,101 @@
     }
 }
 
+#events {
+    .container {
+        margin-bottom: 100px;
+    }
+    .wrapper {
+        margin-bottom: 100px;
+        justify-content: center;
+        gap: 40px;
+    }
+    .card {
+        position: relative;
+        width: 100%;
+        display: none;
+        &:nth-child(1),
+        &:nth-child(2) {
+            display: inline-block;
+        }
+        .image-wrapper {
+            margin-bottom: 20px;
+            border-radius: 20px 20px 20px 0;
+        }
+    }
+}
+
+.tag {
+    position: absolute;
+    top: 50px;
+    right: -10px;
+    background-color: $primary;
+    border-radius: 25px 25px 25px 0;
+    padding: 10px;
+    color: $text-light;
+    font-weight: 500;
+}
+.date-tag {
+    padding-left: 45px;
+    &::before {
+        content: url(../images/calendar.svg);
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+#links {
+    .wrapper {
+        gap: 30px;
+        justify-content: space-between;
+        margin-bottom: 150px;
+        flex-direction: column;
+    }
+    .square-card {
+        width: 100%;
+        aspect-ratio: 2 / 1;
+        &:nth-child(1) {
+            background-color: #5A83ED;
+        }
+        &:nth-child(2) {
+            background-color: #FFFFFF;
+        }
+        &:nth-child(3) {
+            background-color: #B88F64;
+        }
+    }
+}
+
 @media screen and (min-width: 450px) {
     #announcements {
         .card {
-            width: calc(50% - 10px);
+            width: calc(50% - 20px);
         }
     }
+    #links {
+        .wrapper {
+            flex-direction: row;
+        }
+        .square-card {
+            width: calc(33% - 20px);
+        }
+    }
+}
+
+@media screen and (min-width: 550px) {
+    #announcements {
+        .card {
+            width: calc(50% - 20px);
+        }
+    }
+    #events {
+        .card {
+            width: calc(50% - 20px);
+        }
+    }
+
 }
 
 @media screen and (min-width: 600px) {
@@ -133,6 +228,14 @@
 
 @media screen and (min-width: 760px) {
     #announcements {
+        .card {
+            width: calc(33% - 25px);
+            &:nth-child(3) {
+                display: inline-block;
+            }
+        }
+    }
+    #events {
         .card {
             width: calc(33% - 25px);
             &:nth-child(3) {
@@ -163,6 +266,12 @@
             grid-gap: 20px;
             justify-content: center;
         }
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .tag {
+        right: -30px;
     }
 }
 
