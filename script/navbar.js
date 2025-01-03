@@ -80,53 +80,65 @@ window.addEventListener("scroll", () => {
   };
   
   let currentEventType = null;
-
-const initializeDesktopDropdowns = () => {
-    const screenWidth = window.innerWidth;
-    const newEventType = screenWidth < 1024 ? 'click' : 'mouseover';
-
-    if (currentEventType === newEventType) return;
-
-    dropdowns.forEach((item) => {
-        item.replaceWith(item.cloneNode(true));
-    });
-
-    const updatedDropdowns = document.querySelectorAll('.nav-links li.dropdown');
-
-    updatedDropdowns.forEach((item) => {
-        item.addEventListener(newEventType, () => {
-            updatedDropdowns.forEach((otherItem) => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove("active");
-                }
-            });
-            item.classList.toggle("active");
-
-            if (newEventType === 'click') {
-                document.querySelector(".topbar")?.classList.add("topbar-hidden");
-                updateElementTransforms?.();
-            }
-        });
-    });
-
-    document.addEventListener(newEventType, (event) => {
-        updatedDropdowns.forEach((item) => {
-            if (!item.contains(event.target)) {
-                item.classList.remove("active");
-            }
-        });
-    });
-
-    // Оновлення поточного типу події
-    currentEventType = newEventType;
-};
-
-if (isTouchDevice) {
-    initializeMobileDropdowns();
-} else {
-    initializeDesktopDropdowns();
-    window.addEventListener("resize", () => {
-        initializeDesktopDropdowns();
-    });
-}
-
+  let documentEventListener = null;
+  const desktopDropdownHandlers = new Map();
+  
+  const initializeDesktopDropdowns = () => {
+      const screenWidth = window.innerWidth;
+      const newEventType = screenWidth < 1024 ? 'click' : 'mouseover';
+  
+      if (currentEventType === newEventType) return;
+  
+      dropdowns.forEach((item) => {
+          if (desktopDropdownHandlers.has(item)) {
+              const { handler } = desktopDropdownHandlers.get(item);
+              item.removeEventListener(currentEventType, handler);
+              desktopDropdownHandlers.delete(item);
+          }
+      });
+      if (documentEventListener) {
+          document.removeEventListener(currentEventType, documentEventListener);
+      }
+      
+      const updatedDropdowns = document.querySelectorAll('.nav-links li.dropdown');
+      updatedDropdowns.forEach((item) => {
+          const handler = () => {
+              updatedDropdowns.forEach((otherItem) => {
+                  if (otherItem !== item) {
+                      otherItem.classList.remove("active");
+                  }
+              });
+              item.classList.toggle("active");
+  
+              if (newEventType === 'click') {
+                  document.querySelector(".topbar")?.classList.add("topbar-hidden");
+                  updateElementTransforms?.();
+              }
+          };
+  
+          item.addEventListener(newEventType, handler);
+          desktopDropdownHandlers.set(item, { handler });
+      });
+  
+      documentEventListener = (event) => {
+          updatedDropdowns.forEach((item) => {
+              if (!item.contains(event.target)) {
+                  item.classList.remove("active");
+              }
+          });
+      };
+      document.addEventListener(newEventType, documentEventListener);
+  
+      currentEventType = newEventType;
+  };
+  
+  if (isTouchDevice) {
+      initializeMobileDropdowns();
+  } else {
+      initializeDesktopDropdowns();
+  
+      window.addEventListener("resize", () => {
+          initializeDesktopDropdowns();
+      });
+  }
+  
