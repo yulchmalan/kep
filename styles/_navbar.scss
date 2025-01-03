@@ -7,12 +7,15 @@ header {
 }
 
 nav {
-    span {
-        pointer-events: none;
-    }
      * {
         -webkit-tap-highlight-color: transparent;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    span {
+        pointer-events: none;
+    }
+    i {
+        pointer-events: none;
     }
     position: fixed;
     transform: translateY(136px);
@@ -148,11 +151,11 @@ nav {
             }
         }
         .dropdown {
-            > span, a {
+            > a, span {
                 position: relative;
             }
             &:has(.dropdown-menu:hover) {
-                > span {
+                > a, span {
                     i {
                         transform: rotate(180deg);
                     }

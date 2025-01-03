@@ -363,12 +363,15 @@ nav {
   transition: all 0.6s linear;
   font-size: 20px;
 }
-nav span {
-  pointer-events: none;
-}
 nav * {
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+nav span {
+  pointer-events: none;
+}
+nav i {
+  pointer-events: none;
 }
 nav .container {
   display: -webkit-box;
@@ -529,10 +532,10 @@ nav .burger {
     border-right: none;
     border-top: 1px solid #D4D4D4;
   }
-  nav .dropdown > span, nav .dropdown a {
+  nav .dropdown > a, nav .dropdown span {
     position: relative;
   }
-  nav .dropdown:has(.dropdown-menu:hover) > span i {
+  nav .dropdown:has(.dropdown-menu:hover) > a i, nav .dropdown:has(.dropdown-menu:hover) span i {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
   }

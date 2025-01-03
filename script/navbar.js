@@ -46,31 +46,87 @@ window.addEventListener("scroll", () => {
     lastScrollY = window.scrollY;
   });
 
-const dropdowns = document.querySelectorAll('.nav-links li.dropdown');
-const eventType = screenWidth < 1024 ? 'click' : 'mouseover';
+  const dropdowns = document.querySelectorAll('.nav-links li.dropdown');
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  
+  const initializeMobileDropdowns = () => {
+      const updatedDropdowns = document.querySelectorAll('.nav-links li.dropdown');
+  
+      if (isTouchDevice) {
+          updatedDropdowns.forEach((item) => {
+              item.addEventListener('touchstart', (event) => {
+                  event.stopPropagation();
+  
+                  const isActive = item.classList.contains("active");
+  
+                  updatedDropdowns.forEach((otherItem) => {
+                      if (otherItem !== item) {
+                          otherItem.classList.remove("active");
+                      }
+                  });
+  
+                  item.classList.toggle("active", !isActive);
+              });
+          });
+  
+          document.addEventListener('touchstart', (event) => {
+              updatedDropdowns.forEach((item) => {
+                  if (!item.contains(event.target)) {
+                      item.classList.remove("active");
+                  }
+              });
+          });
+      }
+  };
+  
+  let currentEventType = null;
 
-if (dropdowns) {
+const initializeDesktopDropdowns = () => {
+    const screenWidth = window.innerWidth;
+    const newEventType = screenWidth < 1024 ? 'click' : 'mouseover';
+
+    if (currentEventType === newEventType) return;
+
     dropdowns.forEach((item) => {
-        item.addEventListener("click", () => {
-            dropdowns.forEach((otherItem) => {
+        item.replaceWith(item.cloneNode(true));
+    });
+
+    const updatedDropdowns = document.querySelectorAll('.nav-links li.dropdown');
+
+    updatedDropdowns.forEach((item) => {
+        item.addEventListener(newEventType, () => {
+            updatedDropdowns.forEach((otherItem) => {
                 if (otherItem !== item) {
                     otherItem.classList.remove("active");
                 }
             });
             item.classList.toggle("active");
-            if (eventType === 'click') {
-                topbar.classList.add("topbar-hidden");
-                updateElementTransforms();
+
+            if (newEventType === 'click') {
+                document.querySelector(".topbar")?.classList.add("topbar-hidden");
+                updateElementTransforms?.();
             }
         });
     });
+
+    document.addEventListener(newEventType, (event) => {
+        updatedDropdowns.forEach((item) => {
+            if (!item.contains(event.target)) {
+                item.classList.remove("active");
+            }
+        });
+    });
+
+    // Оновлення поточного типу події
+    currentEventType = newEventType;
+};
+
+if (isTouchDevice) {
+    initializeMobileDropdowns();
+} else {
+    initializeDesktopDropdowns();
+    window.addEventListener("resize", () => {
+        initializeDesktopDropdowns();
+    });
 }
 
-document.addEventListener(eventType, (event) => {
-    dropdowns.forEach((item) => {
-        if (!item.contains(event.target)) {
-            item.classList.remove("active");
-            updateElementTransforms();
-        }
-    });
-});
