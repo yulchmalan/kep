@@ -1,0 +1,40 @@
+@import "./variables";
+
+.search-form {
+    position: relative;
+    padding: 44px 32px;
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+    label {
+        font-weight: 600;
+        pointer-events: none;
+        position: absolute;
+        transform: translate(1em, 0);
+        color: #dedede;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.2s ease;
+    }
+    i {
+        font-size: 1rem;
+    }
+    input {
+        width: calc(100% - 26px);
+        color: $text-dark;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid #dedede;
+        padding: 0.5em 1em;
+    }
+    &:has(input:focus),
+    &:not(:has(input:placeholder-shown)) {
+        >label {
+            font-size: 0.75rem;
+            transform: translate(0, calc(-100% - 0.5rem));
+            color: #dedede;
+            font-weight: 600;
+        }
+    }
+}

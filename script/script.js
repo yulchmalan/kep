@@ -23,42 +23,47 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    button.addEventListener("click", () => {
-        if (visibleCount >= cards.length) {
-            visibleCount = window.innerWidth < 1170 ? 2 : 3;
-            const sectionTop = newsSection.getBoundingClientRect().top + window.scrollY;
-            window.scrollTo({ top: sectionTop - 150, behavior: "smooth" });
-        } else {
-            visibleCount += window.innerWidth < 1170 ? incrementSmallScreen : incrementLargeScreen;
-        }
+    if (button) {
+        button.addEventListener("click", () => {
+            if (visibleCount >= cards.length) {
+                visibleCount = window.innerWidth < 1170 ? 2 : 3;
+                const sectionTop = newsSection.getBoundingClientRect().top + window.scrollY;
+                window.scrollTo({ top: sectionTop - 150, behavior: "smooth" });
+            } else {
+                visibleCount += window.innerWidth < 1170 ? incrementSmallScreen : incrementLargeScreen;
+            }
+            updateVisibility();
+        });
+    
         updateVisibility();
-    });
-
-    updateVisibility();
-
-    window.addEventListener("resize", () => {
-        const previousVisibleCount = visibleCount;
-        visibleCount = window.innerWidth < 600 ? Math.min(previousVisibleCount, 2) : Math.min(previousVisibleCount, 3);
-        updateVisibility();
-    });
+    
+        window.addEventListener("resize", () => {
+            const previousVisibleCount = visibleCount;
+            visibleCount = window.innerWidth < 600 ? Math.min(previousVisibleCount, 2) : Math.min(previousVisibleCount, 3);
+            updateVisibility();
+        });
+    }
 
     const scrollers = document.querySelectorAll(".slide");
     if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAnimation();
+        addAnimation();
     }
 
     function addAnimation() {
-    scrollers.forEach((scroller) => {
-        scroller.setAttribute("data-animated", true);
+        scrollers.forEach((scroller) => {
+            scroller.setAttribute("data-animated", true);
 
-        const scrollerInner = scroller.querySelector(".wrapper");
-        const scrollerContent = Array.from(scrollerInner.children);
+            const scrollerInner = scroller.querySelector(".wrapper");
+            const scrollerContent = Array.from(scrollerInner.children);
 
-        scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        duplicatedItem.setAttribute("aria-hidden", true);
-        scrollerInner.appendChild(duplicatedItem);
+            scrollerContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(duplicatedItem);
+            });
         });
-    });
     }
+
+    const currentYear = new Date().getFullYear();
+    document.getElementById('currentYear').textContent = currentYear;
 });

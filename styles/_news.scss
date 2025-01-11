@@ -1,0 +1,138 @@
+@import "./variables";
+
+.aside-grid {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: 66% minmax(350px, 33%);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'main aside';
+    gap: 32px;
+}
+
+#full-news {
+    grid-area: main;
+    aside {
+        grid-area: aside;
+        display: flex;
+        gap: 32px;
+        flex-direction: column;
+    }
+    .wrapper {
+        width: 100%;
+    }
+
+}
+
+.news-card {
+    cursor: pointer;
+    padding: 32px 24px;
+    margin-bottom: 32px;
+    width: 100%;
+    &:hover {
+        > h3 {
+            background-size: 100% 2px;
+            color: inherit;
+            color: $primary;
+        }
+        > .image-wrapper {
+            &::after {
+                opacity: .1;
+            }
+            img {
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+        }
+    }
+    .image-wrapper {
+        width: 100%;
+        height: 250px;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition: .4s linear all;
+            transform: translate(-50%, -50%);
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-color: $dark-blue;
+            transition: .3s linear all;
+        }
+    }
+    h3 {
+        display: inline;
+        background-image: linear-gradient($primary, $primary);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: 0% 2px;
+        transition: background-size 500ms ease-in-out, color .5s linear;
+        font-weight: 600;
+        line-height: 125%;
+    }
+}
+
+#lastEvents {
+    padding: 24px;
+    h2 {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin-bottom: 24px;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+    .event-card {
+        display: flex;
+        gap: 16px;
+        .time {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 8px;
+            span {
+                font-size: 0.75rem;
+            }
+            i {
+                color: $primary;
+            }
+        }
+        h3 {
+            font-weight: 600;
+        }
+    }
+}
+
+.date-tag {
+    color: $text-light;
+    background-color: $primary;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    padding: 10px 5px;
+    border-radius: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+    span {
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}

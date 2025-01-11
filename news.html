@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>kepska strona</title>
+  </head>
+  <body>
+    <header>
+        <nav>
+          <div class="container">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="Логотип Коледжу електронних приладів"> </a>
+            <ul class="nav-links">
+              <li><a href="index.html" class="active">Головна</a></li>
+              <li class="dropdown"><span>Про коледж <i class="fa-solid fa-chevron-down"></i></span>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Дирекція</a></li>
+                  <li><a href="#">Циклові комісії</a></li>
+                  <li><a href="#">Відділення</a></li>
+                  <li><a href="#">Бібліотека</a></li>
+                  <li><a href="#">Публічна інформація</a></li>
+                  <li><a href="#">Нормативно-правова база</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><span>Студентам <i class="fa-solid fa-chevron-down"></i></span>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Розклад</a></li>
+                  <li><a href="#">Студенське самоврядування</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><span>Вступнику <i class="fa-solid fa-chevron-down"></i></span>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Підготовчі курси</a></li>
+                  <li><a href="#">Правила прийому та інші нормативні документи</a></li>
+                  <li><a href="#">Програма вступних випробувань</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><span>Викладачам <i class="fa-solid fa-chevron-down"></i></span>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Графік навчального процесу</a></li>
+                  <li><a href="#">Освітньо-професійні програми</a></li>
+                  <li><a href="#">Інше</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Контакти</a></li>
+            </ul>
+            <button type="button" id="burger" class="burger icon">
+              <svg height="32" width="32">
+                  <use class="burger-icon" href="images/icons.svg#burger"/>
+              </svg>
+            </button>
+          </div>
+        </nav>
+    </header>
+    <main>
+        <section class="full-width-section" id="moreInfo">
+            <div class="container">
+                <h1>Останні новини</h1>
+            </div>
+        </section>
+        <div class="container">
+            <div class="aside-grid">
+                <section id="full-news">
+                    <div class="wrapper">
+                        <div class="news-card block">
+                            <div class="image-wrapper"><img src="images/kidos.png" alt=""></div>
+                            <p class="light-text">Життя коледжу</p>
+                            <h3 class="font-size">"Мова єднає: святкуємо День української писемності та мови разом з ФКЕП"</h3>
+                            <p class="font-size">27 жовтня Україна відзначає День української писемності та мови, який щоразу нагадує про силу рідного слова та його значення для кожного з нас. За традицією у коледжі відбувся виступ і конкурс читців приурочений цьому святу.</p>
+                            <a class="btn btn-primary font-size" href="#"><span>Читати далі<i class="fa-solid fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </section>
+                <aside>
+                    <form action="" class="search-form block">
+                        <label for="search">Пошук</label>
+                        <input type="text" name="search" id="search" placeholder=""><i class="fa-solid fa-magnifying-glass"></i>
+                    </form>
+                    <section id="lastEvents" class="block">
+                      <h2>Останні події</h2>
+                      <div class="wrapper">
+                        <div class="event-card">
+                          <div class="date-tag"><span>01</span>ГРУД., 2024</div>
+                          <div class="content">
+                            <div class="time"><i class="fa-regular fa-clock"></i><span>12:00-12:30</span></div>
+                            <h3>День української писемності та мови разом з ФКЕП</h3>
+                          </div>
+                        </div>
+                        <div class="event-card">
+                          <div class="date-tag"><span>01</span>ГРУД., 2024</div>
+                          <div class="content">
+                            <div class="time"><i class="fa-regular fa-clock"></i><span>12:00-12:30</span></div>
+                            <h3>День української писемності та мови разом з ФКЕП</h3>
+                          </div>
+                        </div><div class="event-card">
+                          <div class="date-tag"><span>01</span>ГРУД., 2024</div>
+                          <div class="content">
+                            <div class="time"><i class="fa-regular fa-clock"></i><span>12:00-12:30</span></div>
+                            <h3>День української писемності та мови разом з ФКЕП</h3>
+                          </div>
+                        </div><div class="event-card">
+                          <div class="date-tag"><span>01</span>ГРУД., 2024</div>
+                          <div class="content">
+                            <div class="time"><i class="fa-regular fa-clock"></i><span>12:00-12:30</span></div>
+                            <h3>День української писемності та мови разом з ФКЕП</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <p class="font-size"><i class="fa-solid fa-location-dot"></i>Адреса:</p>
+            <a href="https://maps.app.goo.gl/C75wGNHST8XtxAoP6">вул. Вовчинецька, <br> 223 м. Івано-Франківськ, 76006</a>
+          </div>
+          <div>
+            <p class="font-size"><i class="fa-solid fa-phone-volume"></i>Приймальня директора:</p>
+            <a href="tel:0342783046">(0342) 78-30-46,</a>
+            <a href="tel:0342783022">(0342) 78-30-22,</a>
+            <a href="mailto:ifkep@ukr.net">ifkep@ukr.net</a>
+          </div>
+          <div>
+            <p class="font-size"><i class="fa-solid fa-phone-volume"></i>Приймальна комісія:</p>
+            <a href="tel:0342565700">(0342) 56-57-00,</a>
+            <a href="tel:0688263546">(068) 826-35-46,</a>
+            <a href="tel:0993754783">(099) 375-47-83</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="font-size">Всі права захищені &copy; <span id="currentYear"></span></p>
+          <div>
+            <div><a href=""><i class="fa-brands fa-facebook"></i></a></div>
+            <div><a href=""><i class="fa-brands fa-telegram"></i></a></div>
+            <div><a href=""><i class="fa-brands fa-viber"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script/navbar.js"></script>
+    <script src="script/script.js" defer></script>
+  </body>
+</html>

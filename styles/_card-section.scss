@@ -13,14 +13,12 @@
         flex-wrap: wrap;
     }
     .card {
+        cursor: pointer;
         display: inline-block;
         border-radius: 20px 20px 20px 0;
         background-color: #fff;
         box-shadow: -2px 2px 40px rgba(222, 222, 222, 0.25);
         padding: 20px 20px 10px 20px;
-        * {
-            cursor: default;
-        }
         &:hover {
             > h3 {
                 background-size: 100% 2px;
@@ -72,6 +70,16 @@
             transition: background-size 500ms ease-in-out, color .5s linear;
             font-weight: 600;
             line-height: 125%;
+        }
+    }
+    .date-tag {
+        padding-left: 45px;
+        &::before {
+            content: url(../images/calendar.svg);
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
         }
     }
 }
@@ -158,16 +166,7 @@
     color: $text-light;
     font-weight: 500;
 }
-.date-tag {
-    padding-left: 45px;
-    &::before {
-        content: url(../images/calendar.svg);
-        position: absolute;
-        left: 16px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-}
+
 
 #links {
     .wrapper {
