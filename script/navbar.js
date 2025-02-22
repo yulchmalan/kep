@@ -1,147 +1,75 @@
-const nav = document.querySelector('nav');
-const searchBtn = document.getElementById('search');
-const header = document.querySelector('header');
-const burger = document.querySelector('.burger');
-const navList = document.querySelector('.nav-links');
-const navLinks = document.querySelectorAll('.nav-links li');
-const icon = document.querySelector('.burger-icon');
-const topbar = document.querySelector(".topbar");
-const elements = document.querySelectorAll(".move-el");
-const screenWidth = window.innerWidth;
-let lastScrollY =  window.scrollY;
-
-function updateElementTransforms() {
-    if (topbar){
-        const isTopbarVisible = !topbar.classList.contains("topbar-hidden");
-
-    elements.forEach(element => {
-        if (screenWidth <= 1024) {
-            element.style.transform = `translateY(${isTopbarVisible ? "140px" : "0px"})`;
-        } else if (screenWidth <= 1170) {
-            element.style.transform = `translateY(${isTopbarVisible ? "160px" : "30px"})`;
-        } else {
-            element.style.transform = `translateY(${isTopbarVisible ? "100px" : "40px"})`;
-        }
-    });
-}}
-
-burger.addEventListener('click', () => {
-    navList.classList.toggle('nav-active');
-
-    if (navList.classList.contains('nav-active')) {
-        icon.setAttribute('href', 'images/icons.svg#close');
-        topbar.classList.add("topbar-hidden");
-    } else {
-        icon.setAttribute('href', 'images/icons.svg#burger');
-    }
-    updateElementTransforms();
-});
-
-window.addEventListener("scroll", () => {
-    if (topbar) {
-        if (lastScrollY < window.scrollY) {
-            topbar.classList.add("topbar-hidden");
-        } else {
-            topbar.classList.remove("topbar-hidden");
-        }
-        updateElementTransforms();
-        lastScrollY = window.scrollY;
-    }
-});
-
-const dropdowns = document.querySelectorAll('.nav-links li.dropdown');
-const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-const initializeMobileDropdowns = () => {
-    const updatedDropdowns = document.querySelectorAll('.nav-links li.dropdown');
-
-    if (isTouchDevice) {
-        updatedDropdowns.forEach((item) => {
-            item.addEventListener('touchstart', (event) => {
-                event.stopPropagation();
-
-                const isActive = item.classList.contains("active");
-
-                updatedDropdowns.forEach((otherItem) => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove("active");
-                    }
-                });
-
-                item.classList.toggle("active", !isActive);
-            });
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown");
+    const burger = document.getElementById("burger");
+    const navLinks = document.querySelector(".nav-links");
+    
+    function closeAllDropdowns(except = null) {
+        dropdowns.forEach(dropdown => {
+            if (dropdown !== except) {
+                dropdown.classList.remove("open");
+            }
         });
-
-        document.addEventListener('touchstart', (event) => {
-            updatedDropdowns.forEach((item) => {
-                if (!item.contains(event.target)) {
-                    item.classList.remove("active");
-                }
-            });
-        });
-    }
-};
-
-let currentEventType = null;
-let documentEventListener = null;
-const desktopDropdownHandlers = new Map();
-
-const initializeDesktopDropdowns = () => {
-    const screenWidth = window.innerWidth;
-    const newEventType = screenWidth < 1024 ? 'click' : 'mouseover';
-
-    if (currentEventType === newEventType) return;
-
-    dropdowns.forEach((item) => {
-        if (desktopDropdownHandlers.has(item)) {
-            const { handler } = desktopDropdownHandlers.get(item);
-            item.removeEventListener(currentEventType, handler);
-            desktopDropdownHandlers.delete(item);
-        }
-    });
-    if (documentEventListener) {
-        document.removeEventListener(currentEventType, documentEventListener);
     }
     
-    const updatedDropdowns = document.querySelectorAll('.nav-links li.dropdown');
-    updatedDropdowns.forEach((item) => {
-        const handler = () => {
-            updatedDropdowns.forEach((otherItem) => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove("active");
+    dropdowns.forEach(dropdown => {
+        const span = dropdown.querySelector("span");
+        if (window.innerWidth < 1124) {
+            span.addEventListener("click", function (event) {
+                event.stopPropagation();
+                const isOpen = dropdown.classList.contains("open");
+                closeAllDropdowns(dropdown);
+                
+                if (!isOpen) {
+                    dropdown.classList.add("open");
+                } else {
+                    dropdown.classList.remove("open");
                 }
             });
-            item.classList.toggle("active");
-
-            if (newEventType === 'click') {
-                document.querySelector(".topbar")?.classList.add("topbar-hidden");
-                updateElementTransforms?.();
-            }
-        };
-
-        item.addEventListener(newEventType, handler);
-        desktopDropdownHandlers.set(item, { handler });
+        }
+    });
+    
+    document.addEventListener("click", function () {
+        closeAllDropdowns();
     });
 
-    documentEventListener = (event) => {
-        updatedDropdowns.forEach((item) => {
-            if (!item.contains(event.target)) {
-                item.classList.remove("active");
-            }
-        });
-    };
-    document.addEventListener(newEventType, documentEventListener);
-
-    currentEventType = newEventType;
-};
-
-if (isTouchDevice) {
-    initializeMobileDropdowns();
-} else {
-    initializeDesktopDropdowns();
-
-    window.addEventListener("resize", () => {
-        initializeDesktopDropdowns();
+    burger.addEventListener("click", function () {
+        navLinks.classList.toggle("nav-active");
+        burger.classList.toggle("active");
     });
-}
-  
+
+    //topbar
+    const topbar = document.querySelector(".topbar");
+    const nav = document.querySelector("nav");
+    let lastScrollY = window.scrollY;
+    let threshold = 2; 
+
+    window.addEventListener("scroll", function () {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY + threshold && currentScrollY > 36) {
+            topbar.style.transform = "translateY(-56px)";
+            nav.style.transform = "translateY(-56px)";
+        } else if (lastScrollY > currentScrollY + threshold) {
+            topbar.style.transform = "translateY(0)";
+            nav.style.transform = "translateY(0)";
+        }
+
+        lastScrollY = currentScrollY;
+    });
+    
+    const searchButton = document.getElementById("search-button");
+    const closeButton = document.getElementById("close-search");
+    const searchOverlay = document.getElementById("search");
+    
+    searchButton.addEventListener("click", () => {
+        searchOverlay.classList.add("active");
+    });
+    
+    closeButton.addEventListener("click", () => {
+        searchOverlay.classList.remove("active");
+    });
+    
+    searchOverlay.querySelector(".overlay").addEventListener("click", () => {
+        searchOverlay.classList.remove("active");
+    });
+});

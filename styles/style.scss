@@ -1,5 +1,4 @@
 @import "./variables";
-@import "./background";
 @import "./topbar";
 @import "./navbar";
 @import "./hero-swiper";
@@ -19,8 +18,8 @@
 
 body {
     font-family: "Montserrat", "Poppins", sans-serif;
-    padding-top: 80px;
     background-color: $white;
+    padding-top: 75px;
 }
 
 a {
@@ -58,11 +57,6 @@ section:not(.hero-section):not(#lastEvents) {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-}
-
-.move-el {
-    transition: all linear .6s;
-    transform: translateY(130px);
 }
 
 .font-size {
@@ -128,7 +122,7 @@ section:not(.hero-section):not(#lastEvents) {
     color: $text-light;
     position: relative;
     overflow: hidden;
-    transition: .6s linear all;
+    transition: .5s linear all;
     &::before {
         content: "";
         display: block;
@@ -209,9 +203,15 @@ section:not(.hero-section):not(#lastEvents) {
     }
 }
 
+@media screen and (min-width: 1024px) {
+    body {
+        padding-top: 131px;
+    }
+}
+
 @media screen and (min-width: 1170px) {
     .container { 
-        padding: 0;
+        padding: 0 10px;
     }
     .move-el {
         transform: translateY(100px);

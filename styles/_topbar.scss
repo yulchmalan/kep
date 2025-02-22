@@ -1,118 +1,57 @@
 @import "./variables";
 
 .topbar {
-    background: linear-gradient(180deg, rgba(0,192,255,1) 50%, rgba(90,131,237,1) 50%);
-    color: $text-light;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    transition: .6s all linear;
-    .container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        max-height: 136px;
+    display: none;
+}
+
+@media screen and (min-width: 1124px) { 
+    .topbar {
+        transition: all 0.4s linear; 
+        display: block;
+        background: linear-gradient(90deg, rgba(0,192,255,1) 0%, rgba(15,182,252,1) 40%, rgba(86,134,238,1) 40%, rgba(90,131,237,1) 100%);
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
     }
     .topbar_section {
         display: flex;
+        padding: 16px 0;
         align-items: center;
-        padding: 20px 0;
+        color: $white;
         &:nth-child(1) {
-            min-width: 100%;
-            font-weight: bold;
-            gap: 24px;
-            font-size: 1.25rem;
+            width: 40%;
+            justify-content: flex-start;
+            gap: 16px;
+            font-weight: 600;
+            i {
+                font-size: 24px;
+            }
         }
         &:nth-child(2) {
-            font-size: 1rem;
-            gap: 10px;
+            width: 60%;
             justify-content: flex-end;
             > div {
                 display: flex;
                 align-items: center;
-                gap: 5px;
-                position: relative;
-                &:not(:last-child)::after {
-                    content: "";
-                    position: absolute;
-                    right: -10px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: 1px;
-                    height: 30px;
-                    background-color: $white;
-                    border-radius: 1px;
+                gap: 8px;
+                padding: 0 20px;
+                &:not(:last-of-type) {
+                    border-right: 1px solid $white;
+                    i {
+                        font-size: 20px;
+                    }
                 }
-                > div {
-                    display: flex;
-                    flex-direction: column;
-                }
-                a {
-                    color: inherit;
-                }
-            }
-            i {
-                max-width: 0;
-                overflow: hidden;
-            }
-        }
-        i {
-            font-size: 1.5rem;
-        }
-    }
-}
-
-.topbar-hidden {
-    transform: translateY(calc(-1 * 80px));
-    & + nav {
-        // top: 0;
-        transform: translateY(0);
-    }
-}
-
-@media screen and (min-width: 520px) {
-    .topbar {
-        .topbar_section {
-            &:nth-child(2) {
-                gap: 20px;
-                > div {
-                    gap: 10px;
-                }
-                i {
-                    max-width: none;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1170px) {
-    .topbar {
-        background: linear-gradient(90deg, rgba(0,192,255,1) 40%, rgba(90,131,237,1) 40%);
-        .container {
-            flex-wrap: nowrap
-        }
-        .topbar_section {
-            padding: 20px 0;
-            &:nth-child(1) {
-                min-width: auto;
-                max-width: 40%;
-                font-size: 1.5rem;
-            }
-            &:nth-child(2) {
-                font-size: 1.25rem;
-                gap: 40px;
-                > div {
-                    &:not(:last-child)::after {
-                        right: -20px;
-                        height: 40px;
+                &:last-of-type {
+                    i {
+                        font-size: 18px;
                     }
                 }
             }
-            i {
-                font-size: 2rem;
-            }
         }
+        a {
+            color: $white;
+        }
+        
     }
 }
