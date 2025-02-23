@@ -8,7 +8,7 @@
     overflow: hidden;
     color: $text-light;
     h1 {
-        font-size: 1.75rem;
+        font-size: 1rem;
     }
     h2 {
         font-size: 2rem;
@@ -22,19 +22,22 @@
     }
     .swiper-slide {
         width: 100%;
-        max-height: 70vh;
+        max-height: 75vh;
         position: relative;
         overflow: hidden;
         z-index: 1;
-        padding: 60px 30px;
+        padding: 60px 0;
         aspect-ratio: 1 / 1.8;
         display: flex;
         align-items: center;
+        .container {
+            width: 100%;
+        }
         .content {
-            max-width: 840px;
             display: flex;
             flex-direction: column;
             gap: 15px;
+            max-width: 845px;
             > div {
                 display: flex;
                 flex-wrap: wrap;
@@ -65,37 +68,31 @@
                 transform: translateY(-50%);
             }
         }
+        p {
+            display: none;
+        }
     }
     .swiper-button-prev {
-        top: 50%;
-        transform: translateY(-50%);
         left: 45px;
-        width: 64px;
-        height: 64px;
-        background-color: #fbfbfb7d;
-        border-radius: 50%;
-        font-size: 2rem;
-        &::after {
-            content: "";
-            position: absolute;
-        }
     }
     .swiper-button-next {
-        top: 50%;
-        transform: translateY(-50%);
         right: 45px;
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        background-color: #fbfbfb7d;
-        font-size: 2rem;
-        &::after {
-            content: "";
-            position: absolute;
-        }
     }
     .swiper-button-prev, .swiper-button-next{
         display: none;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 48px;
+        height: 48px;
+        background-color: #fbfbfb7d;
+        border-radius: 50%;
+        i {
+            font-size: 24px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+        }
     }
     .swiper-pagination {
         bottom: 30px;
@@ -111,6 +108,15 @@
         transform: scale(.9);
     }
 }
+@media screen and (min-width: 424px) {
+    .hero-section {
+        .swiper-slide {
+            p {
+                display: block;
+            }
+        }
+    }
+ }
 
 @media screen and (min-width: 1124px) {
     .hero-section {
@@ -127,6 +133,7 @@
                     gap: 35px;
                 }
             }
+            
         }
         .swiper-button-prev, .swiper-button-next {
             display: flex;

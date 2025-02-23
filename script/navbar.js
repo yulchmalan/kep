@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdowns.forEach(dropdown => {
         const span = dropdown.querySelector("span");
         if (window.innerWidth < 1124) {
-            span.addEventListener("touchstart", function (event) {
+            span.addEventListener("mouseover", function (event) {
                 event.stopPropagation();
                 const isOpen = dropdown.classList.contains("open");
                 closeAllDropdowns(dropdown);
