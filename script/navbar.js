@@ -14,16 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdowns.forEach(dropdown => {
         const span = dropdown.querySelector("span");
         span.addEventListener("click", function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-            const isOpen = dropdown.classList.contains("open");
-            closeAllDropdowns(dropdown);
-            if (window.innerWidth < 1124) {
-            
+            if (window.innerWidth < 1124) { 
+                event.stopPropagation(); 
+                const isOpen = dropdown.classList.contains("open");
+                closeAllDropdowns(dropdown);
+    
                 if (!isOpen) {
                     dropdown.classList.add("open");
-                } else {
-                    dropdown.classList.remove("open");
                 }
             }
         });

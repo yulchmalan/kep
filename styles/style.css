@@ -227,7 +227,6 @@ nav .burger i {
   color: #5a83ed;
 }
 nav .dropdown {
-  width: 100%;
   position: relative;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
