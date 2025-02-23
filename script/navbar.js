@@ -13,20 +13,20 @@ document.addEventListener("DOMContentLoaded", function () {
     
     dropdowns.forEach(dropdown => {
         const span = dropdown.querySelector("span");
-        if (window.innerWidth < 1124) {
-            dropdown.addEventListener("click", function (event) {
-                event.preventDefault();
-                event.stopPropagation();
-                const isOpen = dropdown.classList.contains("open");
-                closeAllDropdowns(dropdown);
-                
+        span.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            const isOpen = dropdown.classList.contains("open");
+            closeAllDropdowns(dropdown);
+            if (window.innerWidth < 1124) {
+            
                 if (!isOpen) {
                     dropdown.classList.add("open");
                 } else {
                     dropdown.classList.remove("open");
                 }
-            });
-        }
+            }
+        });
     });
     
     document.addEventListener("click", function () {

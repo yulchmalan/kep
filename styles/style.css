@@ -230,6 +230,10 @@ nav .dropdown {
   width: 100%;
   position: relative;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+nav .dropdown span {
+  -webkit-tap-highlight-color: transparent;
 }
 nav .dropdown i {
   font-size: 0.75rem;
@@ -243,6 +247,7 @@ nav .dropdown-menu {
   display: none;
   right: 18px;
   margin-top: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 nav .dropdown-menu::after {
   content: "";
