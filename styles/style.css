@@ -1481,7 +1481,12 @@ nav .container > div {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     gap: 32px;
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
   .left-main {
     width: 66%;
@@ -1515,6 +1520,128 @@ nav .container > div {
   }
   .right-menu ul li a {
     color: inherit;
+  }
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.accordion-section h2 {
+  margin-bottom: 12px;
+}
+
+.accordion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.accordion .accordion-item {
+  position: relative;
+  background-color: #fff;
+  border-radius: 30px;
+  -webkit-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+}
+.accordion .accordion-item .accordion-heading {
+  position: relative;
+  width: 100%;
+  left: 0;
+  padding: 32px;
+  border-radius: 30px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  font-weight: 600;
+}
+.accordion .accordion-item .accordion-heading:hover {
+  background-color: #D4D4D4;
+}
+.accordion .accordion-item .accordion-heading i {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #5a83ed;
+  color: #fff;
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.accordion .accordion-item .accordion-heading .fa-minus {
+  display: none;
+}
+.accordion .accordion-item .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 32px;
+  -webkit-transition: max-height 1.4s ease;
+  transition: max-height 1.4s ease;
+}
+.accordion .accordion-item .accordion-content > * {
+  padding: 16px 0 32px;
+}
+.accordion .accordion-item .accordion-content ul {
+  list-style: disc;
+}
+.accordion .accordion-item .accordion-content li {
+  padding-bottom: 12px;
+  margin-left: 24px;
+}
+.accordion .accordion-item .accordion-content a {
+  color: #5a83ed;
+  text-decoration: underline;
+}
+.accordion .accordion-item.active .accordion-heading .fa-minus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.accordion .accordion-item.active .accordion-heading .fa-plus {
+  display: none;
+}
+.accordion .accordion-item.active .accordion-content {
+  max-height: 300px;
+  -webkit-animation: fade 1s ease-in-out;
+          animation: fade 1s ease-in-out;
+}
+
+@media screen and (min-width: 1124px) {
+  .accordion-section h2 {
+    margin-bottom: 32px;
   }
 }
 footer {
@@ -1665,7 +1792,7 @@ body {
 }
 
 main {
-  min-height: calc(100vh - 131px);
+  min-height: calc(100vh + 273px);
   padding-bottom: 402px;
 }
 
@@ -1704,7 +1831,8 @@ section:not(.hero-section):not(#lastEvents) h2 {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .font-size {
@@ -1879,7 +2007,8 @@ section:not(.hero-section):not(#lastEvents) h2 {
 }
 @media screen and (min-width: 1170px) {
   .container {
-    padding: 0 10px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
   .move-el {
     -webkit-transform: translateY(100px);

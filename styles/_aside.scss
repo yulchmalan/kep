@@ -6,7 +6,10 @@
     .two-parts-div {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         gap: 32px;
+        padding-top: 75px;
+        padding-bottom: 75px;
     }
     .left-main {
         width: 66%;

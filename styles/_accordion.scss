@@ -1,0 +1,99 @@
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.accordion-section {
+    h2 {
+        margin-bottom: 12px;
+    }
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .accordion-item {
+        position: relative;
+        background-color: #fff;
+        border-radius: 30px;
+        transition: background-color .3s linear;
+        .accordion-heading {
+            position: relative;
+            width: 100%;
+            left: 0;
+            padding: 32px;
+            border-radius: 30px;
+            transition: all .3s linear;
+            font-weight: 600;
+            &:hover {
+                background-color: $grey
+            }
+            i {
+                position: absolute;
+                right: 32px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: $primary;
+                color: #fff;
+                border-radius: 50%;
+                height: 36px;
+                width: 36px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .fa-minus {
+                display: none;
+            }
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 32px;
+            transition: max-height 1.4s ease;
+            >* {
+                padding: 16px 0 32px;
+            }
+            ul {
+                list-style: disc;
+            }
+            li {
+                padding-bottom: 12px;
+                margin-left: 24px;
+            }
+            a {
+                color: $primary;
+                text-decoration: underline;
+            }
+        }
+        &.active {
+            .accordion-heading {
+                .fa-minus {
+                    display: flex;
+                }
+                .fa-plus {
+                    display: none;
+                }
+            }
+            .accordion-content{
+                max-height: 300px;
+                animation: fade 1s ease-in-out;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1124px) {
+    .accordion-section {
+        h2 {
+            margin-bottom: 32px;
+        }
+    }
+}
