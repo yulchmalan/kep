@@ -54,7 +54,7 @@ nav * {
 
 section:not(.hero-section):not(#lastEvents) {
     h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 600;
         cursor: default;
     }
@@ -194,7 +194,7 @@ section:not(.hero-section):not(#lastEvents) {
 
 @media screen and (min-width: 1024px) {
     section:not(.hero-section):not(#lastEvents) h2 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .font-size {
         font-size: 1.5rem;
@@ -235,6 +235,9 @@ section:not(.hero-section):not(#lastEvents) {
 }
 
 @media screen and (min-width: 1600px) {
+    section:not(.hero-section):not(#lastEvents) h2 {
+        font-size: 2.5rem;
+    }
     .container { 
         max-width: 1600px;
     }

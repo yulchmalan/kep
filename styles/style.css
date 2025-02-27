@@ -922,6 +922,7 @@ nav .container > div {
   background: url(../images/bg.png) no-repeat center center;
   background-size: cover;
   z-index: 1;
+  padding: 48px;
 }
 .full-width-section::before {
   content: "";
@@ -937,20 +938,19 @@ nav .container > div {
 }
 .full-width-section h1 {
   font-family: "Montserrat", "Poppins", sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   cursor: default;
   text-align: center;
   width: 100%;
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 .full-width-section p {
   cursor: default;
 }
 
 #bigNums .container {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 #bigNums dl {
   display: -webkit-box;
@@ -1068,7 +1068,7 @@ nav .container > div {
 }
 @media screen and (min-width: 1170px) {
   .full-width-section h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   #bigNums dl {
     gap: 20px;
@@ -1469,6 +1469,54 @@ nav .container > div {
   font-weight: 600;
 }
 
+.right-menu {
+  display: none;
+}
+
+@media screen and (min-width: 1124px) {
+  .two-parts-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 32px;
+  }
+  .left-main {
+    width: 66%;
+  }
+  .right-menu {
+    width: 33%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 12px;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 30px;
+  }
+  .right-menu h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .right-menu ul {
+    padding: 0 0 0 8px;
+  }
+  .right-menu ul li {
+    padding: 12px 0;
+  }
+  .right-menu ul li:not(:last-child) {
+    border-bottom: 1px solid #D4D4D4;
+  }
+  .right-menu ul li a {
+    color: inherit;
+  }
+}
 footer {
   position: absolute;
   bottom: 0;
@@ -1648,7 +1696,7 @@ nav *::selection {
 }
 
 section:not(.hero-section):not(#lastEvents) h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   cursor: default;
 }
@@ -1805,7 +1853,7 @@ section:not(.hero-section):not(#lastEvents) h2 {
 
 @media screen and (min-width: 1024px) {
   section:not(.hero-section):not(#lastEvents) h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .font-size {
     font-size: 1.5rem;
@@ -1845,6 +1893,9 @@ section:not(.hero-section):not(#lastEvents) h2 {
   }
 }
 @media screen and (min-width: 1600px) {
+  section:not(.hero-section):not(#lastEvents) h2 {
+    font-size: 2.5rem;
+  }
   .container {
     max-width: 1600px;
   }

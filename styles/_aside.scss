@@ -1,0 +1,39 @@
+.right-menu {
+    display: none;
+}
+
+@media screen and (min-width: 1124px) {
+    .two-parts-div {
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+    }
+    .left-main {
+        width: 66%;
+    }
+    .right-menu {
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 32px;
+        background-color: #fff;
+        border-radius: 30px;
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        ul {
+            padding: 0 0 0 8px;
+            li {
+                padding: 12px 0;
+                &:not(:last-child) {
+                    border-bottom: 1px solid $grey;
+                }
+                a {
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
