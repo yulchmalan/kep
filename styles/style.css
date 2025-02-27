@@ -82,10 +82,6 @@ header {
   font-size: 0.85rem;
 }
 
-body {
-  height: 2000px;
-}
-
 nav {
   position: fixed;
   left: 0;
@@ -1474,7 +1470,9 @@ nav .container > div {
 }
 
 footer {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   color: #fbfbfb;
   background-color: #5a83ed;
   padding: 50px 0;
@@ -1612,9 +1610,15 @@ footer .font-size::selection {
 }
 
 body {
+  position: relative;
   font-family: "Montserrat", "Poppins", sans-serif;
   background-color: #fbfbfb;
   padding-top: 75px;
+}
+
+main {
+  min-height: calc(100vh - 131px);
+  padding-bottom: 402px;
 }
 
 a {

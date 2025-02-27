@@ -1,7 +1,9 @@
 @import "./variables";
 
 footer {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     color: $text-light;
     background-color: $primary;
     padding: 50px 0;
