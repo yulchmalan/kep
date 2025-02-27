@@ -2,27 +2,29 @@
 
 .slide[data-animated="true"] {
     overflow: hidden;
-  }
-  .slide[data-direction="right"] {
+}
+    .slide[data-direction="right"] {
     --animation-direction: reverse;
-  }
-  
-  .slide[data-direction="left"] {
+}
+
+.slide[data-direction="left"] {
     --animation-direction: forwards;
-  }
-  
-  .slide[data-animated="true"] .wrapper {
+}
+
+.slide[data-animated="true"] .wrapper {
     width: max-content;
     animation: scroll 30s var(--animation-direction, forwards) linear infinite;
-  }
+}
+
+.slide[data-animated="true"]:hover .wrapper {
+    animation-play-state: paused;
+}
   
-  
-  
-  @keyframes scroll {
+@keyframes scroll {
     to {
-      transform: translate(calc(-50% - 0.5rem));
+        transform: translate(calc(-50% - 0.5rem));
     }
-  }
+}
 
 .slider-section {
     position: relative;

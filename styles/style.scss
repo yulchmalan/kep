@@ -60,7 +60,7 @@ section:not(.hero-section):not(#lastEvents) {
 }
 
 .font-size {
-    font-size: 1rem;
+    font-size: 0.875rem;
 }
 
 .light-text {
@@ -207,6 +207,9 @@ section:not(.hero-section):not(#lastEvents) {
     body {
         padding-top: 131px;
     }
+    .font-size {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (min-width: 1170px) {
@@ -227,5 +230,8 @@ section:not(.hero-section):not(#lastEvents) {
 @media screen and (min-width: 1600px) {
     .container { 
         max-width: 1600px;
+    }
+    .font-size {
+        font-size: 1.125rem;
     }
 }

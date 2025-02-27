@@ -63,6 +63,9 @@
   .topbar_section:nth-child(2) > div:not(:last-of-type) i {
     font-size: 20px;
   }
+  .topbar_section:nth-child(2) > div:last-of-type {
+    padding-right: 0;
+  }
   .topbar_section:nth-child(2) > div:last-of-type i {
     font-size: 18px;
   }
@@ -76,6 +79,7 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
+  font-size: 0.85rem;
 }
 
 body {
@@ -92,7 +96,6 @@ nav {
   color: #141414;
   -webkit-transition: all 0.4s linear;
   transition: all 0.4s linear;
-  font-size: 1rem;
 }
 nav::after {
   content: "";
@@ -376,9 +379,9 @@ nav .container > div {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-column-gap: 25px;
-       -moz-column-gap: 25px;
-            column-gap: 25px;
+    -webkit-column-gap: 16px;
+       -moz-column-gap: 16px;
+            column-gap: 16px;
     max-width: none;
     width: auto;
     height: auto;
@@ -474,8 +477,11 @@ nav .container > div {
   }
 }
 @media screen and (min-width: 1440px) {
+  header {
+    font-size: 1rem;
+  }
   nav .container {
-    padding: 15px 0;
+    padding: 15px 10px;
   }
   nav .dropdown .dropdown-menu {
     max-width: -webkit-max-content;
@@ -1124,6 +1130,11 @@ nav .container > div {
           animation: scroll 30s var(--animation-direction, forwards) linear infinite;
 }
 
+.slide[data-animated=true]:hover .wrapper {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
 @-webkit-keyframes scroll {
   to {
     -webkit-transform: translate(calc(-50% - 0.5rem));
@@ -1645,7 +1656,7 @@ section:not(.hero-section):not(#lastEvents) h2 {
 }
 
 .font-size {
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
 .light-text {
@@ -1810,6 +1821,9 @@ section:not(.hero-section):not(#lastEvents) h2 {
   body {
     padding-top: 131px;
   }
+  .font-size {
+    font-size: 1rem;
+  }
 }
 @media screen and (min-width: 1170px) {
   .container {
@@ -1829,5 +1843,8 @@ section:not(.hero-section):not(#lastEvents) h2 {
 @media screen and (min-width: 1600px) {
   .container {
     max-width: 1600px;
+  }
+  .font-size {
+    font-size: 1.125rem;
   }
 }/*# sourceMappingURL=style.css.map */

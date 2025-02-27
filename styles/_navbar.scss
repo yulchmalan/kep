@@ -4,6 +4,7 @@ header {
     top: 0;
     left: 0; right: 0;
     z-index: 100; 
+    font-size: 0.85rem;
 }
 
 body {
@@ -18,7 +19,6 @@ nav {
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     color: $text-dark;
     transition: all 0.4s linear; 
-    font-size: 1rem;
     &::after {
         content: "";
         display: block;
@@ -250,7 +250,7 @@ nav {
             transform: translateX(0);
             position: static;
             flex-direction: row;
-            column-gap: 25px;
+            column-gap: 16px;
             max-width: none;
             width: auto;
             height: auto;
@@ -344,9 +344,12 @@ nav {
 
 
 @media screen and (min-width: 1440px) {
+    header {
+        font-size: 1rem;
+    }
     nav {
         .container {
-            padding: 15px 0;
+            padding: 15px 10px;
         }
         .dropdown {
             .dropdown-menu {

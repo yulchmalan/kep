@@ -1,10 +1,9 @@
 let valueDisplays = document.querySelectorAll(".num");
 let interval = 300;
-
-let observer; 
+let observer;
 
 let createObserver = () => {
-  if (observer) observer.disconnect(); 
+  if (observer) observer.disconnect();
 
   let options;
   if (window.innerWidth < 600) {
@@ -34,7 +33,7 @@ let startCounting = (entries, observer) => {
         valueDisplays.forEach((num) => startCount(num));
       }
 
-      observer.unobserve(target); 
+      observer.unobserve(target);
     }
   });
 };

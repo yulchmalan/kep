@@ -3,239 +3,388 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>kepska strona</title>
   </head>
   <body>
     <header>
-        <address class="topbar">
-            <div class="container">
-              <div class="topbar_section">
-                <p>Ми в соцмережах:</p>
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-telegram"></i></a>
-                <a href=""><i class="fa-brands fa-viber"></i></a>
-              </div>
-              <div class="topbar_section">
-                <div class="geo">
-                  <i class="fa-solid fa-location-dot"></i>
-                  <a href="https://maps.app.goo.gl/C75wGNHST8XtxAoP6">вул. Вовчинецька, 223</a></div>
-                <div class="mail">
-                  <i class="fa-solid fa-envelope"></i>
-                  <a href="mailto:ifkep@ukr.net">ifkep@ukr.net</a></div>
-                <div class="tel">
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <a href="tel:0342783046">0342783046</a>
-                </div>
-              </div>
+      <address class="topbar">
+        <div class="container">
+          <div class="topbar_section">
+            <p>Ми в соцмережах:</p>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-telegram"></i></a>
+            <a href=""><i class="fa-brands fa-viber"></i></a>
+          </div>
+          <div class="topbar_section">
+            <div class="geo">
+              <i class="fa-solid fa-location-dot"></i>
+              <a href="https://maps.app.goo.gl/C75wGNHST8XtxAoP6"
+                >вул. Вовчинецька, 223</a
+              >
             </div>
-        </address>
-        <nav>
-          <div class="container">
-            <a href="index.html" class="logo"><img src="images/logo.png" alt="Логотип Коледжу електронних приладів"> </a>
-            <ul class="nav-links">
-              <li><a href="index.html" class="active">Головна</a></li>
-              <li class="dropdown"><span>Про коледж <i class="fa-solid fa-chevron-down"></i></span>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Історія коледжу</a></li>
-                  <li><a href="#">Пам'яті Захисників України</a></li>
-                  <li><a href="#">Адміністрація</a></li>
-                  <li><a href="#">Кадровий склад</a></li>
-                  <li><a href="#">Матеріально-технічне забезпечення</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><span>Публічна інформація <i class="fa-solid fa-chevron-down"></i></span>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Установчі документи</a></li>
-                  <li><a href="#">Положення</a></li>
-                  <li><a href="#">Вибори директора</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><span>Освітня діяльність <i class="fa-solid fa-chevron-down"></i></span>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Методична рада</a></li>
-                  <li><a href="#">Виховна діяльність</a></li>
-                  <li><a href="#">Виробнича діяльність</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><span>Викладачу <i class="fa-solid fa-chevron-down"></i></span>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Атестація педагогічних працівників</a></li>
-                  <li><a href="#">Підвищення кваліфікації</a></li>
-                  <li><a href="#">Школа нового педагога</a></li>
-                  <li><a href="#">Методичні матеріали</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><span>Студенту <i class="fa-solid fa-chevron-down"></i></span>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Стипендіальне забезпечення</a></li>
-                  <li><a href="#">Каталог дисциплін вільного вибору</a></li>
-                </ul>
-              </li>
-            </ul>
-            <div>
-              <button type="button" id="search-button" class="search-button icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-              <button type="button" id="burger" class="burger icon">
-                <i class="fa-solid fa-bars"></i>
-                <i class="fa-solid fa-xmark"></i>
-              </button>
+            <div class="mail">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:ifkep@ukr.net">ifkep@ukr.net</a>
+            </div>
+            <div class="tel">
+              <i class="fa-solid fa-phone-volume"></i>
+              <a href="tel:0342783046">0342783046</a>
             </div>
           </div>
-        </nav>
+        </div>
+      </address>
+      <nav>
+        <div class="container">
+          <a href="index.html" class="logo"
+            ><img
+              src="images/logo.png"
+              alt="Логотип Коледжу електронних приладів"
+            />
+          </a>
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Головна</a></li>
+            <li class="dropdown">
+              <span>Про коледж <i class="fa-solid fa-chevron-down"></i></span>
+              <ul class="dropdown-menu">
+                <li><a href="#">Історія коледжу</a></li>
+                <li><a href="#">Пам'яті Захисників України</a></li>
+                <li><a href="#">Адміністрація</a></li>
+                <li><a href="#">Кадровий склад</a></li>
+                <li><a href="#">Матеріально-технічне забезпечення</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <span
+                >Публічна інформація <i class="fa-solid fa-chevron-down"></i
+              ></span>
+              <ul class="dropdown-menu">
+                <li><a href="#">Установчі документи</a></li>
+                <li><a href="#">Положення</a></li>
+                <li><a href="#">Вибори директора</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <span
+                >Освітня діяльність <i class="fa-solid fa-chevron-down"></i
+              ></span>
+              <ul class="dropdown-menu">
+                <li><a href="#">Методична рада</a></li>
+                <li><a href="#">Виховна діяльність</a></li>
+                <li><a href="#">Виробнича діяльність</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <span>Абітурієнту <i class="fa-solid fa-chevron-down"></i></span>
+              <ul class="dropdown-menu">
+                <li><a href="#">Нормативно-правова база</a></li>
+                <li><a href="#">Протоколи</a></li>
+                <li><a href="#">Рейтингові списки</a></li>
+                <li><a href="#">Інформація про вступ</a></li>
+                <li><a href="#">Підготовчі курси</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <span>Викладачу <i class="fa-solid fa-chevron-down"></i></span>
+              <ul class="dropdown-menu">
+                <li><a href="#">Атестація педагогічних працівників</a></li>
+                <li><a href="#">Підвищення кваліфікації</a></li>
+                <li><a href="#">Школа нового педагога</a></li>
+                <li><a href="#">Методичні матеріали</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <span>Студенту <i class="fa-solid fa-chevron-down"></i></span>
+              <ul class="dropdown-menu">
+                <li><a href="#">Стипендіальне забезпечення</a></li>
+                <li><a href="#">Каталог дисциплін вільного вибору</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div>
+            <button type="button" id="search-button" class="search-button icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button type="button" id="burger" class="burger icon">
+              <i class="fa-solid fa-bars"></i>
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
     </header>
     <div id="search" class="">
-        <div class="overlay"></div>
-        <button type="button" id="close-search"><i class="fa-solid fa-xmark"></i></button>
-        <input type="text" placeholder="Введіть пошуковий запит">
+      <div class="overlay"></div>
+      <button type="button" id="close-search">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <input type="text" placeholder="Введіть пошуковий запит" />
     </div>
-    <main >
+    <main>
       <section class="hero-section swiper-section" id="hero-section">
         <div class="swiper-hero">
-            <div class="swiper-button-prev hero-prev"><i class="fa-solid fa-chevron-left"></i></div>
-            <div class="swiper-pagination hero-pag"></div>
-            <div class="swiper-button-next hero-next"><i class="fa-solid fa-chevron-right"></i></div>
-            <div class="swiper-wrapper">                    
-                <div class="swiper-slide">
-                  <div class="image-wrapper"><img src="images/swiper/1.jpg" alt="Зображення студентів"></div>
-                  <div class="container">
-                    <div class="content">
-                      <h1 class="highlight">ВІТАЄМО В КЕПі!</h1>
-                      <h2>ВСП "Фаховий коледж електронних приладів ІФНТУНГ"</h2>
-                      <p class="font-size">Це сучасний заклад освіти, в якому створено всі умови для підготовки фахових молодших бакалаврів конкурентоспроможних на сучасному ринку праці</p>
-                      <div>
-                        <a class="btn btn-primary font-size" href="#"><span>Про нас<i class="fa-solid fa-arrow-right"></i></span></a>
-                        <a class="btn btn-secondary font-size" href="#"><span>Вступ<i class="fa-solid fa-arrow-right"></i></span></a>
-                      </div>
-                    </div>
+          <div class="swiper-button-prev hero-prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div class="swiper-pagination hero-pag"></div>
+          <div class="swiper-button-next hero-next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="image-wrapper">
+                <img src="images/swiper/1.jpg" alt="Зображення студентів" />
+              </div>
+              <div class="container">
+                <div class="content">
+                  <h1 class="highlight">ВІТАЄМО В КЕПі!</h1>
+                  <h2>ВСП "Фаховий коледж електронних приладів ІФНТУНГ"</h2>
+                  <p class="font-size">
+                    Це сучасний заклад освіти, в якому створено всі умови для
+                    підготовки фахових молодших бакалаврів конкурентоспроможних
+                    на сучасному ринку праці
+                  </p>
+                  <div>
+                    <a class="btn btn-primary font-size" href="#"
+                      ><span
+                        >Про нас<i class="fa-solid fa-arrow-right"></i></span
+                    ></a>
+                    <a class="btn btn-secondary font-size" href="#"
+                      ><span>Вступ<i class="fa-solid fa-arrow-right"></i></span
+                    ></a>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="image-wrapper"><img src="images/swiper/2.jpg" alt="Зображення студентів"></div>
-                  <div class="container">
-                    <div class="content">
-                      <h2>121 Інженерія програмного забезпечення</h2>
-                      <p class="font-size">Спеціальність формує професійні компетенції з проектування, реалізації, впровадження та супроводу програмного забезпечення в сфері сучасних IT-технологій</p>
-                      <div>
-                        <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrapper">
+                <img src="images/swiper/2.jpg" alt="Зображення студентів" />
+              </div>
+              <div class="container">
+                <div class="content">
+                  <h2>121 Інженерія програмного забезпечення</h2>
+                  <p class="font-size">
+                    Спеціальність формує професійні компетенції з проектування,
+                    реалізації, впровадження та супроводу програмного
+                    забезпечення в сфері сучасних IT-технологій
+                  </p>
+                  <div>
+                    <a class="btn btn-primary font-size" href="#"
+                      ><span
+                        >Про напрям<i class="fa-solid fa-arrow-right"></i></span
+                    ></a>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="image-wrapper"><img src="images/swiper/3.png" alt="Зображення студентів"></div>
-                  <div class="container">
-                    <div class="content">
-                      <h2>151 Автоматизація та комп’ютерно інтегровані технології</h2>
-                      <p class="font-size">Дає можливості стати висококваліфікованим ІТ-фахівцем, який вмітиме забезпечувати функціонування систем автоматизації та комп’ютерної техніки в різних галузях  людської діяльності</p>
-                      <div>
-                        <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrapper">
+                <img src="images/swiper/3.png" alt="Зображення студентів" />
+              </div>
+              <div class="container">
+                <div class="content">
+                  <h2>
+                    151 Автоматизація та комп’ютерно інтегровані технології
+                  </h2>
+                  <p class="font-size">
+                    Дає можливості стати висококваліфікованим ІТ-фахівцем, який
+                    вмітиме забезпечувати функціонування систем автоматизації та
+                    комп’ютерної техніки в різних галузях людської діяльності
+                  </p>
+                  <div>
+                    <a class="btn btn-primary font-size" href="#"
+                      ><span
+                        >Про напрям<i class="fa-solid fa-arrow-right"></i></span
+                    ></a>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="image-wrapper"><img src="images/swiper/4.jpg" alt="Зображення студентів"></div>
-                  <div class="container">
-                    <div class="content">
-                      <h2>123 Комп’ютерна інженерія</h2>
-                      <p class="font-size">Це унікальна спеціальність, що дозволяє отримати знання у галузі комп'ютерних мережевих технологій, комп'ютерної техніки та програмної інженерії</p>
-                      <div>
-                        <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrapper">
+                <img src="images/swiper/4.jpg" alt="Зображення студентів" />
+              </div>
+              <div class="container">
+                <div class="content">
+                  <h2>123 Комп’ютерна інженерія</h2>
+                  <p class="font-size">
+                    Це унікальна спеціальність, що дозволяє отримати знання у
+                    галузі комп'ютерних мережевих технологій, комп'ютерної
+                    техніки та програмної інженерії
+                  </p>
+                  <div>
+                    <a class="btn btn-primary font-size" href="#"
+                      ><span
+                        >Про напрям<i class="fa-solid fa-arrow-right"></i></span
+                    ></a>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="image-wrapper"><img src="images/swiper/5.jpg" alt="Зображення студентів"></div>
-                  <div class="container">
-                    <div class="content">
-                      <h2>152 Метрологія та інформаційно-вимірювальна техніка</h2>
-                      <p class="font-size">Спецільність формує професійні компетенції з проєктування інтелектуальних приладів та вимірювальних систем, їх програмного і метрологічного забезпечення</p>
-                      <div>
-                        <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrapper">
+                <img src="images/swiper/5.jpg" alt="Зображення студентів" />
+              </div>
+              <div class="container">
+                <div class="content">
+                  <h2>152 Метрологія та інформаційно-вимірювальна техніка</h2>
+                  <p class="font-size">
+                    Спецільність формує професійні компетенції з проєктування
+                    інтелектуальних приладів та вимірювальних систем, їх
+                    програмного і метрологічного забезпечення
+                  </p>
+                  <div>
+                    <a class="btn btn-primary font-size" href="#"
+                      ><span
+                        >Про напрям<i class="fa-solid fa-arrow-right"></i></span
+                    ></a>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="image-wrapper"><img src="images/swiper/6.png" alt="Зображення студентів"></div>
-                  <div class="container">
-                    <div class="content">
-                      <h2>072 Фінанси, банківська справа та страхування</h2>
-                      <p class="font-size">Спеціальність формує  загальні і професійні компетенції планово-економічної, організаційно-управлінської, аналітичної роботи у сфері фінансів, банківської справи та страхування</p>
-                      <div>
-                        <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrapper">
+                <img src="images/swiper/6.png" alt="Зображення студентів" />
+              </div>
+              <div class="container">
+                <div class="content">
+                  <h2>072 Фінанси, банківська справа та страхування</h2>
+                  <p class="font-size">
+                    Спеціальність формує загальні і професійні компетенції
+                    планово-економічної, організаційно-управлінської,
+                    аналітичної роботи у сфері фінансів, банківської справи та
+                    страхування
+                  </p>
+                  <div>
+                    <a class="btn btn-primary font-size" href="#"
+                      ><span
+                        >Про напрям<i class="fa-solid fa-arrow-right"></i></span
+                    ></a>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="image-wrapper"><img src="images/swiper/7.png" alt="Зображення студентів"></div>
-                  <div class="container">
-                    <div class="content">
-                      <h2>076 Підприємництво, торгівля та біржова діяльність</h2>
-                      <p class="font-size">Спеціальність забезпечує підготовку фахівців, які за вимогами сучасного ринку праці зможуть  планувати та організовувати підприємницьку і торгівельну діяльності, здійснювати операції на товарних біржах</p>
-                      <div>
-                        <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrapper">
+                <img src="images/swiper/7.png" alt="Зображення студентів" />
+              </div>
+              <div class="container">
+                <div class="content">
+                  <h2>076 Підприємництво, торгівля та біржова діяльність</h2>
+                  <p class="font-size">
+                    Спеціальність забезпечує підготовку фахівців, які за
+                    вимогами сучасного ринку праці зможуть планувати та
+                    організовувати підприємницьку і торгівельну діяльності,
+                    здійснювати операції на товарних біржах
+                  </p>
+                  <div>
+                    <a class="btn btn-primary font-size" href="#"
+                      ><span
+                        >Про напрям<i class="fa-solid fa-arrow-right"></i></span
+                    ></a>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="image-wrapper"><img src="images/swiper/8.png" alt="Зображення студентів"></div>
-                  <div class="container">
-                    <div class="content">
-                      <h2>171 Електроніка</h2>
-                      <p class="font-size">Спеціальність формує професійні компетенції з проектування, реалізації, впровадження та обслуговування радіоелектронних пристроїв в різноманітних сферах</p>
-                      <div>
-                        <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrapper">
+                <img src="images/swiper/8.png" alt="Зображення студентів" />
+              </div>
+              <div class="container">
+                <div class="content">
+                  <h2>171 Електроніка</h2>
+                  <p class="font-size">
+                    Спеціальність формує професійні компетенції з проектування,
+                    реалізації, впровадження та обслуговування радіоелектронних
+                    пристроїв в різноманітних сферах
+                  </p>
+                  <div>
+                    <a class="btn btn-primary font-size" href="#"
+                      ><span
+                        >Про напрям<i class="fa-solid fa-arrow-right"></i></span
+                    ></a>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="image-wrapper"><img src="images/swiper/9.png" alt="Зображення студентів"></div>
-                  <div class="container">
-                    <div class="content">
-                      <h2>172 Телекомунікації та радіотехніка</h2>
-                      <p class="font-size">Мобільний і супутниковий зв'язок, радіомовлення і телебачення, комп'ютерні та інформаційні системи, інтернет існують і розвиваються завдяки саме телекомунікаційним системам</p>
-                      <div>
-                        <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrapper">
+                <img src="images/swiper/9.png" alt="Зображення студентів" />
+              </div>
+              <div class="container">
+                <div class="content">
+                  <h2>172 Телекомунікації та радіотехніка</h2>
+                  <p class="font-size">
+                    Мобільний і супутниковий зв'язок, радіомовлення і
+                    телебачення, комп'ютерні та інформаційні системи, інтернет
+                    існують і розвиваються завдяки саме телекомунікаційним
+                    системам
+                  </p>
+                  <div>
+                    <a class="btn btn-primary font-size" href="#"
+                      ><span
+                        >Про напрям<i class="fa-solid fa-arrow-right"></i></span
+                    ></a>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="image-wrapper"><img src="images/swiper/10.jpg" alt="Зображення студентів"></div>
-                  <div class="container">
-                    <div class="content">
-                      <h2>131 Прикладна механіка</h2>
-                      <p class="font-size">Спеціальність для тих, хто прагне проектувати нові зразки робототехнічних систем з використанням найсучасніших програм, інженерних систем автоматизованого проєктування та систем 3D-моделювання</p>
-                      <div>
-                        <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrapper">
+                <img src="images/swiper/10.jpg" alt="Зображення студентів" />
+              </div>
+              <div class="container">
+                <div class="content">
+                  <h2>131 Прикладна механіка</h2>
+                  <p class="font-size">
+                    Спеціальність для тих, хто прагне проектувати нові зразки
+                    робототехнічних систем з використанням найсучасніших
+                    програм, інженерних систем автоматизованого проєктування та
+                    систем 3D-моделювання
+                  </p>
+                  <div>
+                    <a class="btn btn-primary font-size" href="#"
+                      ><span
+                        >Про напрям<i class="fa-solid fa-arrow-right"></i></span
+                    ></a>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="image-wrapper"><img src="images/swiper/11.png" alt="Зображення студентів"></div>
-                  <div class="container">
-                    <div class="content">
-                      <h2>Підготовчі курси</h2>
-                      <p class="font-size">ВСП "Фаховий коледж електронних приладів ІФНТУНГ" запрошує учнів 9-х та 11-х класів на підготовчі курси, які дозволять отримати додатково 50 балів  до рейтингу та збільшити свої шанси при вступі (Щоб перейти на форму для реєстрації тисніть на слайдер)</p>
-                      <div>
-                        <a class="btn btn-primary font-size" href="#"><span>Про напрям<i class="fa-solid fa-arrow-right"></i></span></a>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrapper">
+                <img src="images/swiper/11.png" alt="Зображення студентів" />
+              </div>
+              <div class="container">
+                <div class="content">
+                  <h2>Підготовчі курси</h2>
+                  <p class="font-size">
+                    ВСП "Фаховий коледж електронних приладів ІФНТУНГ" запрошує
+                    учнів 9-х та 11-х класів на підготовчі курси, які дозволять
+                    отримати додатково 50 балів до рейтингу та збільшити свої
+                    шанси при вступі (Щоб перейти на форму для реєстрації
+                    тисніть на слайдер)
+                  </p>
+                  <div>
+                    <a class="btn btn-primary font-size" href="#"
+                      ><span
+                        >Про напрям<i class="fa-solid fa-arrow-right"></i></span
+                    ></a>
                   </div>
                 </div>
+              </div>
             </div>
           </div>
+        </div>
       </section>
       <section class="cards-section" id="news">
         <div class="container">
@@ -244,44 +393,84 @@
           </a>
           <div class="wrapper">
             <div class="card">
-              <div class="image-wrapper"><img src="images/kidos.png" alt=""></div>
+              <div class="image-wrapper">
+                <img src="images/kidos.png" alt="" />
+              </div>
               <p class="light-text">Життя коледжу - 01.01.2024 09:00</p>
-              <h3 class="font-size">"Мова єднає: святкуємо День української писемності та мови разом з ФКЕП"</h3>
+              <h3 class="font-size">
+                "Мова єднає: святкуємо День української писемності та мови разом
+                з ФКЕП"
+              </h3>
             </div>
             <div class="card">
-              <div class="image-wrapper"><img src="images/kidos.png" alt=""></div>
+              <div class="image-wrapper">
+                <img src="images/kidos.png" alt="" />
+              </div>
               <p class="light-text">Життя коледжу - 01.01.2024 09:00</p>
-              <h3 class="font-size">"Мова єднає: святкуємо День української писемності та мови разом з ФКЕП"</h3>
+              <h3 class="font-size">
+                "Мова єднає: святкуємо День української писемності та мови разом
+                з ФКЕП"
+              </h3>
             </div>
             <div class="card">
-              <div class="image-wrapper"><img src="images/kidos.png" alt=""></div>
+              <div class="image-wrapper">
+                <img src="images/kidos.png" alt="" />
+              </div>
               <p class="light-text">Життя коледжу - 01.01.2024 09:00</p>
-              <h3 class="font-size">"Мова єднає: святкуємо День української писемності та мови разом з ФКЕП"</h3>
+              <h3 class="font-size">
+                "Мова єднає: святкуємо День української писемності та мови разом
+                з ФКЕП"
+              </h3>
             </div>
             <div class="card">
-              <div class="image-wrapper"><img src="images/kidos.png" alt=""></div>
+              <div class="image-wrapper">
+                <img src="images/kidos.png" alt="" />
+              </div>
               <p class="light-text">Життя коледжу - 01.01.2024 09:00</p>
-              <h3 class="font-size">"Мова єднає: святкуємо День української писемності та мови разом з ФКЕП"</h3>
+              <h3 class="font-size">
+                "Мова єднає: святкуємо День української писемності та мови разом
+                з ФКЕП"
+              </h3>
             </div>
             <div class="card">
-              <div class="image-wrapper"><img src="images/kidos.png" alt=""></div>
+              <div class="image-wrapper">
+                <img src="images/kidos.png" alt="" />
+              </div>
               <p class="light-text">Життя коледжу - 01.01.2024 09:00</p>
-              <h3 class="font-size">"Мова єднає: святкуємо День української писемності та мови разом з ФКЕП"</h3>
+              <h3 class="font-size">
+                "Мова єднає: святкуємо День української писемності та мови разом
+                з ФКЕП"
+              </h3>
             </div>
             <div class="card">
-              <div class="image-wrapper"><img src="images/kidos.png" alt=""></div>
+              <div class="image-wrapper">
+                <img src="images/kidos.png" alt="" />
+              </div>
               <p class="light-text">Життя коледжу - 01.01.2024 09:00</p>
-              <h3 class="font-size">"Мова єднає: святкуємо День української писемності та мови разом з ФКЕП"</h3>
+              <h3 class="font-size">
+                "Мова єднає: святкуємо День української писемності та мови разом
+                з ФКЕП"
+              </h3>
             </div>
             <div class="card">
-              <div class="image-wrapper"><img src="images/kidos.png" alt=""></div>
+              <div class="image-wrapper">
+                <img src="images/kidos.png" alt="" />
+              </div>
               <p class="light-text">Життя коледжу - 01.01.2024 09:00</p>
-              <h3 class="font-size">"Мова єднає: святкуємо День української писемності та мови разом з ФКЕП"</h3>
+              <h3 class="font-size">
+                "Мова єднає: святкуємо День української писемності та мови разом
+                з ФКЕП"
+              </h3>
             </div>
             <div class="card">
-              <div class="image-wrapper"><img src="images/kidos.png" alt=""></div>
+              <div class="image-wrapper">
+                <img src="images/kidos.png" alt="" />
+              </div>
               <p class="light-text">Життя коледжу - 01.01.2024 09:00</p>
-              <h3 class="font-size">"Мова єднає: святкуємо День української писемності та мови разом з ФКЕП"</h3>
+              <h3 class="font-size">
+                "Мова єднає: святкуємо День української писемності та мови разом
+                з ФКЕП"
+              </h3>
             </div>
           </div>
           <button class="btn-transparent" type="button">Показати ще</button>
@@ -293,10 +482,10 @@
             <div>
               <div class="polygon">
                 <svg height="60" width="60" fill="none" class="icon-lg">
-                  <use href="images/icons.svg#clock"/>
+                  <use href="images/icons.svg#clock" />
                 </svg>
                 <svg height="50" width="50" fill="none" class="icon-sm">
-                  <use href="images/icons.svg#clock-sm"/>
+                  <use href="images/icons.svg#clock-sm" />
                 </svg>
               </div>
               <dt><span class="num" data-val="40"></span>+</dt>
@@ -305,10 +494,10 @@
             <div>
               <div class="polygon">
                 <svg height="64" width="64" class="icon-lg">
-                  <use href="images/icons.svg#rating"/>
+                  <use href="images/icons.svg#rating" />
                 </svg>
                 <svg height="54" width="54" class="icon-sm">
-                  <use href="images/icons.svg#rating-sm"/>
+                  <use href="images/icons.svg#rating-sm" />
                 </svg>
               </div>
               <dt><span class="num" data-val="1000"></span>+</dt>
@@ -317,10 +506,10 @@
             <div>
               <div class="polygon">
                 <svg height="84" width="84" class="icon-lg">
-                  <use href="images/icons.svg#books"/>
+                  <use href="images/icons.svg#books" />
                 </svg>
                 <svg height="64" width="64" class="icon-sm">
-                  <use href="images/icons.svg#books-sm"/>
+                  <use href="images/icons.svg#books-sm" />
                 </svg>
               </div>
               <dt><span class="num" data-val="10000"></span>+</dt>
@@ -329,10 +518,10 @@
             <div>
               <div class="polygon">
                 <svg height="64" width="64" class="icon-lg">
-                  <use href="images/icons.svg#hat"/>
+                  <use href="images/icons.svg#hat" />
                 </svg>
                 <svg height="45" width="45" class="icon-sm">
-                  <use href="images/icons.svg#hat-sm"/>
+                  <use href="images/icons.svg#hat-sm" />
                 </svg>
               </div>
               <dt><span class="num" data-val="11"></span>+</dt>
@@ -341,7 +530,7 @@
           </dl>
         </div>
       </section>
-      
+
       <section class="cards-section" id="events">
         <div class="container">
           <a href="news.html">
@@ -349,19 +538,31 @@
           </a>
           <div class="wrapper">
             <div class="card">
-              <div class="image-wrapper"><img src="images/bereh.png" alt=""></div>
-               <h3 class="font-size">День української писемності та мови разом з ФКЕП</h3>
-               <p class="tag date-tag">01.04.2006</p>
+              <div class="image-wrapper">
+                <img src="images/bereh.png" alt="" />
+              </div>
+              <h3 class="font-size">
+                День української писемності та мови разом з ФКЕП
+              </h3>
+              <p class="tag date-tag">01.04.2006</p>
             </div>
             <div class="card">
-              <div class="image-wrapper"><img src="images/bereh.png" alt=""></div>
-               <h3 class="font-size">День української писемності та мови разом з ФКЕП</h3>
-               <p class="tag date-tag">01.04.2006</p>
+              <div class="image-wrapper">
+                <img src="images/bereh.png" alt="" />
+              </div>
+              <h3 class="font-size">
+                День української писемності та мови разом з ФКЕП
+              </h3>
+              <p class="tag date-tag">01.04.2006</p>
             </div>
             <div class="card">
-              <div class="image-wrapper"><img src="images/bereh.png" alt=""></div>
-               <h3 class="font-size">День української писемності та мови разом з ФКЕП</h3>
-               <p class="tag date-tag">01.04.2006</p>
+              <div class="image-wrapper">
+                <img src="images/bereh.png" alt="" />
+              </div>
+              <h3 class="font-size">
+                День української писемності та мови разом з ФКЕП
+              </h3>
+              <p class="tag date-tag">01.04.2006</p>
             </div>
           </div>
         </div>
@@ -373,46 +574,116 @@
         <div class="slide">
           <div class="wrapper" data-direction="right">
             <div class="square-card">
-              <a href="https://promprylad.ua/ua/"><img loading="lazy" src="images/logos/promPrylad.svg" alt="Логотип ПромПриладу"></a>
+              <a href="https://promprylad.ua/ua/"
+                ><img
+                  loading="lazy"
+                  src="images/logos/promPrylad.svg"
+                  alt="Логотип ПромПриладу"
+              /></a>
             </div>
             <div class="square-card">
-              <a href="https://softjourn.com/"><img loading="lazy" src="images/logos/softJourn.svg" alt="Логотип soft journ"></a>
+              <a href="https://softjourn.com/"
+                ><img
+                  loading="lazy"
+                  src="images/logos/softJourn.svg"
+                  alt="Логотип soft journ"
+              /></a>
             </div>
             <div class="square-card">
-              <a href="https://www.softserveinc.com/uk-ua"><img loading="lazy" src="images/logos/softServe.svg" alt="Логотип soft serve"></a>
+              <a href="https://www.softserveinc.com/uk-ua"
+                ><img
+                  loading="lazy"
+                  src="images/logos/softServe.svg"
+                  alt="Логотип soft serve"
+              /></a>
             </div>
             <div class="square-card">
-              <a href="https://careers.epam.ua/"><img loading="lazy" src="images/logos/epam.png" alt="Логотип epam"></a>
+              <a href="https://careers.epam.ua/"
+                ><img
+                  loading="lazy"
+                  src="images/logos/epam.png"
+                  alt="Логотип epam"
+              /></a>
             </div>
             <div class="square-card">
-              <a href="https://inveritasoft.com/"><img loading="lazy" src="images/logos/inverita.svg" alt="Логотип Inverita"></a>
+              <a href="https://inveritasoft.com/"
+                ><img
+                  loading="lazy"
+                  src="images/logos/inverita.svg"
+                  alt="Логотип Inverita"
+              /></a>
             </div>
             <div class="square-card">
-              <a href="https://it-cluster.if.ua/"><img loading="lazy" src="images/logos/it-cluster.png" alt="Логотип IT cluster"></a>
+              <a href="https://it-cluster.if.ua/"
+                ><img
+                  loading="lazy"
+                  src="images/logos/it-cluster.png"
+                  alt="Логотип IT cluster"
+              /></a>
             </div>
             <div class="square-card">
-              <a href="https://tvnet.if.ua/"><img loading="lazy" src="images/logos/discovery.png" alt="Логотип Діскавері"></a>
+              <a href="https://tvnet.if.ua/"
+                ><img
+                  loading="lazy"
+                  src="images/logos/discovery.png"
+                  alt="Логотип Діскавері"
+              /></a>
             </div>
             <div class="square-card">
-              <a href="http://www.microl.ua/"><img loading="lazy" src="images/logos/microl.png" alt="Логотип microl"></a>
+              <a href="http://www.microl.ua/"
+                ><img
+                  loading="lazy"
+                  src="images/logos/microl.png"
+                  alt="Логотип microl"
+              /></a>
             </div>
             <div class="square-card">
-              <a href="https://if.dsoua.com/ua/"><img loading="lazy" src="images/logos/rhk.jpg" alt="Логотип РГК Івано-Франківськ"></a>
+              <a href="https://if.dsoua.com/ua/"
+                ><img
+                  loading="lazy"
+                  src="images/logos/rhk.jpg"
+                  alt="Логотип РГК Івано-Франківськ"
+              /></a>
             </div>
             <div class="square-card">
-              <a href="https://www.oe.if.ua/uk"><img loading="lazy" src="images/logos/oblenerho.svg" alt="Логотип ОблЕнерго"></a>
+              <a href="https://www.oe.if.ua/uk"
+                ><img
+                  loading="lazy"
+                  src="images/logos/oblenerho.svg"
+                  alt="Логотип ОблЕнерго"
+              /></a>
             </div>
             <div class="square-card">
-              <a href="https://www.technoktoys.com/ua/"><img loading="lazy" src="images/logos/techok.png" alt="Логотип techok"></a>
+              <a href="https://www.technoktoys.com/ua/"
+                ><img
+                  loading="lazy"
+                  src="images/logos/techok.png"
+                  alt="Логотип techok"
+              /></a>
             </div>
             <div class="square-card">
-              <a href="https://it-expert.top/"><img loading="lazy" src="images/logos/itexp.png" alt="Логотип IT Експерт"></a>
+              <a href="https://it-expert.top/"
+                ><img
+                  loading="lazy"
+                  src="images/logos/itexp.png"
+                  alt="Логотип IT Експерт"
+              /></a>
             </div>
             <div class="square-card">
-              <a href="https://ukrtelecom.store/46-vano-frankvsk.html"><img loading="lazy" src="images/logos/ukrtel.png" alt="Логотип укртелеком"></a>
+              <a href="https://ukrtelecom.store/46-vano-frankvsk.html"
+                ><img
+                  loading="lazy"
+                  src="images/logos/ukrtel.png"
+                  alt="Логотип укртелеком"
+              /></a>
             </div>
             <div class="square-card">
-              <a href="https://www.electrolux.ua/ua/"><img loading="lazy" src="images/logos/electrolux.svg" alt="Логотип electrolux"></a>
+              <a href="https://www.electrolux.ua/ua/"
+                ><img
+                  loading="lazy"
+                  src="images/logos/electrolux.svg"
+                  alt="Логотип electrolux"
+              /></a>
             </div>
           </div>
         </div>
@@ -422,13 +693,28 @@
           <h2>Корисні посилання</h2>
           <div class="wrapper">
             <div class="square-card">
-              <a href="https://mon.gov.ua/"><img src="images/logos/mon.svg" loading="lazy" alt="Логотип МОН"></a>
+              <a href="https://mon.gov.ua/"
+                ><img
+                  src="images/logos/mon.svg"
+                  loading="lazy"
+                  alt="Логотип МОН"
+              /></a>
             </div>
             <div class="square-card">
-              <a href="https://testportal.gov.ua/"><img src="images/logos/center.svg" loading="lazy" alt="Логотип українського центру оцінювання якості освіти"></a>
+              <a href="https://testportal.gov.ua/"
+                ><img
+                  src="images/logos/center.svg"
+                  loading="lazy"
+                  alt="Логотип українського центру оцінювання якості освіти"
+              /></a>
             </div>
             <div class="square-card">
-              <a href="https://nung.edu.ua/"><img src="images/logos/nung.png" loading="lazy" alt="Логотип Університету Нафти і Газу"></a>
+              <a href="https://nung.edu.ua/"
+                ><img
+                  src="images/logos/nung.png"
+                  loading="lazy"
+                  alt="Логотип Університету Нафти і Газу"
+              /></a>
             </div>
           </div>
         </div>
@@ -438,28 +724,44 @@
       <div class="container">
         <div class="footer-top">
           <div>
-            <p class="font-size"><i class="fa-solid fa-location-dot"></i>Адреса:</p>
-            <a href="https://maps.app.goo.gl/C75wGNHST8XtxAoP6">вул. Вовчинецька, 223<br>м. Івано-Франківськ, 76006</a>
+            <p class="font-size">
+              <i class="fa-solid fa-location-dot"></i>Адреса:
+            </p>
+            <a href="https://maps.app.goo.gl/C75wGNHST8XtxAoP6"
+              >вул. Вовчинецька, 223<br />м. Івано-Франківськ, 76006</a
+            >
           </div>
           <div>
-            <p class="font-size"><i class="fa-solid fa-phone-volume"></i>Приймальня директора:</p>
+            <p class="font-size">
+              <i class="fa-solid fa-phone-volume"></i>Приймальня директора:
+            </p>
             <a href="tel:0342783046">(0342) 78-30-46,</a>
             <a href="tel:0342783022">(0342) 78-30-22,</a>
             <a href="mailto:ifkep@ukr.net">ifkep@ukr.net</a>
           </div>
           <div>
-            <p class="font-size"><i class="fa-solid fa-phone-volume"></i>Приймальна комісія:</p>
+            <p class="font-size">
+              <i class="fa-solid fa-phone-volume"></i>Приймальна комісія:
+            </p>
             <a href="tel:0342565700">(0342) 56-57-00,</a>
             <a href="tel:0688263546">(068) 826-35-46,</a>
             <a href="tel:0993754783">(099) 375-47-83</a>
           </div>
         </div>
         <div class="footer-bottom">
-          <p class="font-size">Всі права захищені &copy; <span id="currentYear"></span></p>
+          <p class="font-size">
+            Всі права захищені &copy; <span id="currentYear"></span>
+          </p>
           <div>
-            <div><a href=""><i class="fa-brands fa-facebook"></i></a></div>
-            <div><a href=""><i class="fa-brands fa-telegram"></i></a></div>
-            <div><a href=""><i class="fa-brands fa-viber"></i></a></div>
+            <div>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div>
+              <a href=""><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <div>
+              <a href=""><i class="fa-brands fa-viber"></i></a>
+            </div>
           </div>
         </div>
       </div>
