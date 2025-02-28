@@ -8,7 +8,7 @@
     .topbar {
         transition: all 0.4s linear; 
         display: block;
-        background: linear-gradient(90deg, rgba(0,192,255,1) 0%, rgba(15,182,252,1) 40%, rgba(86,134,238,1) 40%, rgba(90,131,237,1) 100%);
+        background: linear-gradient(90deg, $secondary 0%, $secondary 40%, rgba(86,134,238,1) 40%, rgba(90,131,237,1) 100%);
         .container {
             display: flex;
             flex-direction: row;

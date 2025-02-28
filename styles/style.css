@@ -8,8 +8,8 @@
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
     display: block;
-    background: -webkit-gradient(linear, left top, right top, from(rgb(0, 192, 255)), color-stop(40%, rgb(15, 182, 252)), color-stop(40%, rgb(86, 134, 238)), to(rgb(90, 131, 237)));
-    background: linear-gradient(90deg, rgb(0, 192, 255) 0%, rgb(15, 182, 252) 40%, rgb(86, 134, 238) 40%, rgb(90, 131, 237) 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#00c0ff), color-stop(40%, #00c0ff), color-stop(40%, rgb(86, 134, 238)), to(rgb(90, 131, 237)));
+    background: linear-gradient(90deg, #00c0ff 0%, #00c0ff 40%, rgb(86, 134, 238) 40%, rgb(90, 131, 237) 100%);
   }
   .topbar .container {
     display: -webkit-box;

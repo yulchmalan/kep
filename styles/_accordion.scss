@@ -21,7 +21,7 @@
     gap: 16px;
     .accordion-item {
         position: relative;
-        background-color: #fff;
+        background-color: $pure-white;
         border-radius: 30px;
         transition: background-color .3s linear;
         .accordion-heading {
@@ -41,7 +41,7 @@
                 top: 50%;
                 transform: translateY(-50%);
                 background-color: $primary;
-                color: #fff;
+                color: $pure-white;
                 border-radius: 50%;
                 height: 36px;
                 width: 36px;
