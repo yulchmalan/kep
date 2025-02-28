@@ -6,6 +6,7 @@
 @import "./full-section";
 @import "./slider";
 @import "./news";
+@import "./psychologist";
 @import "./form";
 @import "./aside";
 @import "./accordion";
@@ -53,13 +54,12 @@ nav * {
     }
 }
 
-section:not(.hero-section):not(#lastEvents) {
-    h2 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        cursor: default;
-    }
+section:not(.hero-section):not(#lastEvents):not(.faq-container) h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: default;
 }
+
 
 .container { 
     max-width: 1200px;
@@ -74,6 +74,10 @@ section:not(.hero-section):not(#lastEvents) {
 
 .light-text {
     color: $dark-grey;
+}
+
+.blue-text {
+    color: $blue;
 }
 
 .highlight {
@@ -195,7 +199,7 @@ section:not(.hero-section):not(#lastEvents) {
 }
 
 @media screen and (min-width: 1024px) {
-    section:not(.hero-section):not(#lastEvents) h2 {
+    section:not(.hero-section):not(#lastEvents):not(.faq-container) h2 {
         font-size: 2rem;
     }
     .font-size {

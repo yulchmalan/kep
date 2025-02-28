@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {  
     const dropdowns = document.querySelectorAll(".dropdown");
     const burger = document.getElementById("burger");
     const navLinks = document.querySelector(".nav-links");
@@ -71,3 +71,4 @@ document.addEventListener("DOMContentLoaded", function () {
         searchOverlay.classList.remove("active");
     });
 });
+
