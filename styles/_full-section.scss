@@ -5,7 +5,7 @@
     background: url(../images/bg.png) no-repeat center center;
     background-size: cover;
     z-index: 1;
-    padding: 48px;
+    padding: 32px;
     &::before {
         content: "";
         position: absolute;
@@ -39,7 +39,7 @@
     dl {
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 20px;
         justify-content: space-between;
         width: 100%;
         > div {
