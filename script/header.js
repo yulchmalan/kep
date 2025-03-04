@@ -1,3 +1,10 @@
+const basePath = window.location.pathname.startsWith("/kep/") ? "/kep/" : "/";
+document.querySelectorAll("nav a").forEach((link) => {
+  if (!link.href.startsWith("http")) {
+    link.href = basePath + link.getAttribute("href");
+  }
+});
+
 const headerContent = `
   <address class="topbar">
         <div class="container">
