@@ -27,14 +27,14 @@ const headerContent = `
       </address>
       <nav>
         <div class="container">
-          <a href="/kep/index.html" class="logo"
+          <a href="/index.html" class="logo"
             ><img
-              src="/kep/images/logo.png"
+              src="/images/logo.png"
               alt="Логотип Коледжу електронних приладів"
             />
           </a>
           <ul class="nav-links">
-            <li><a href="./index.html" class="active">Головна</a></li>
+            <li><a href="/index.html" class="active">Головна</a></li>
             <li class="dropdown">
               <span>Про коледж <i class="fa-solid fa-chevron-down"></i></span>
               <ul class="dropdown-menu">
@@ -60,8 +60,8 @@ const headerContent = `
                 >Освітня діяльність <i class="fa-solid fa-chevron-down"></i
               ></span>
               <ul class="dropdown-menu">
-                <li><a href="/kep/edu_activity_sub_pages/psychologist.html">Методична рада</a></li>
-                <li><a href="/kep/edu_activity_sub_pages/activity_clubs.html">Виховна діяльність</a></li>
+                <li><a href="/edu_activity_sub_pages/psychologist.html">Методична рада</a></li>
+                <li><a href="/edu_activity_sub_pages/activity_clubs.html">Виховна діяльність</a></li>
                 <li><a href="#">Виробнича діяльність</a></li>
               </ul>
             </li>
@@ -79,7 +79,7 @@ const headerContent = `
               <span>Викладачу <i class="fa-solid fa-chevron-down"></i></span>
               <ul class="dropdown-menu">
                 <li><a href="#">Атестація педагогічних працівників</a></li>
-                <li><a href="/kep/pages/teacher/training.html">Підвищення кваліфікації</a></li>
+                <li><a href="/pages/teacher/training.html">Підвищення кваліфікації</a></li>
                 <li><a href="#">Школа нового педагога</a></li>
                 <li><a href="#">Методичні матеріали</a></li>
               </ul>
