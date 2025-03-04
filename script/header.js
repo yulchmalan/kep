@@ -106,5 +106,3 @@ const headerContent = `
 `;
 
 document.querySelector("header").innerHTML = headerContent;
-
-//хз наскільки це валідно, але поки най буде :D
