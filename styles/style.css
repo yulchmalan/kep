@@ -1248,7 +1248,7 @@ nav .container > div {
   background-color: #fcfcfc;
 }
 
-#full-psychologist .square-card a img, #full-clubs .square-card a img {
+#full-psychologist .square-card a img, #full-clubs .square-card a img, #full-students-gov .square-card a img, #full-students-un .square-card a img {
   width: 100%;
   max-width: 100%;
   height: 100%;
@@ -1424,7 +1424,7 @@ nav .container > div {
   font-weight: 600;
 }
 
-#full-psychologist > .wrapper:first-child, #full-clubs > .wrapper:first-child {
+#full-psychologist > .wrapper:first-child, #full-clubs > .wrapper:first-child, #full-students-gov > .wrapper:first-child, #full-students-un > .wrapper:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1456,7 +1456,7 @@ nav .container > div {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 .sub-headline-wrapper h2 {
   text-align: center;
@@ -1636,7 +1636,7 @@ nav .container > div {
   padding-top: 20px;
 }
 
-.psychologist-wrapper, .clubs-wrapper {
+.psychologist-wrapper, .clubs-wrapper, .students-gov-wrapper {
   margin: 0 auto;
   background: #fbfbfb;
   padding-top: 20px;
@@ -1894,18 +1894,18 @@ h3 {
             box-shadow: 0px 0px 60px 20px rgba(180, 198, 252, 0.5);
   }
 }
-.full-clubs.container {
+.full-clubs.container, .full-students-gov.container, .full-students-un.container {
   max-width: 1200px;
   padding-right: 0;
   padding-left: 10px;
   margin: 0 auto;
 }
 
-.full-clubs.container .aside-grid {
+.full-clubs.container .aside-grid, .full-students-gov.container .aside-grid, .full-students-un.container .aside-grid {
   display: block;
 }
 @media (min-width: 1024px) {
-  .full-clubs.container .aside-grid {
+  .full-clubs.container .aside-grid, .full-students-gov.container .aside-grid, .full-students-un.container .aside-grid {
     display: grid;
     grid-template-columns: 66% minmax(350px, 33%);
     grid-template-rows: 1fr;
@@ -1914,7 +1914,7 @@ h3 {
   }
 }
 
-.full-clubs.container {
+.full-clubs.container, .full-students-gov.container, .full-students-un.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1922,12 +1922,20 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 50px;
+}
+
+.full-clubs.container {
   padding-bottom: 300px;
+  gap: 50px;
+}
+
+.full-students-gov.container, .full-students-un.container {
+  padding-bottom: 100px;
+  gap: 60px;
 }
 
 @media (min-width: 400px) {
-  .clubs-wrapper {
+  .clubs-wrapper, .students-gov-wrapper {
     padding: 20px 15px 15px;
   }
 }
@@ -2162,6 +2170,9 @@ h3 {
     width: 50px;
     height: 50px;
   }
+  .full-students-gov.container, .full-students-un.container {
+    gap: 160px;
+  }
 }
 @media (min-width: 700px) {
   .image-section {
@@ -2222,6 +2233,146 @@ h3 {
     padding-bottom: 200px;
   }
 }
+.full-students-gov.container section h3, .full-students-un.container section h3 {
+  font-size: 1.7rem;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .full-students-gov.container section h3, .full-students-un.container section h3 {
+    text-align: start;
+  }
+}
+
+.full-students-gov.container .accordion-section, .full-students-un.container .accordion-section {
+  padding-right: 115px;
+}
+.full-students-gov.container .accordion-section .accordion-heading, .full-students-un.container .accordion-section .accordion-heading {
+  font-size: 1.3rem;
+}
+.full-students-gov.container .accordion-section .accordion-content p, .full-students-un.container .accordion-section .accordion-content p {
+  font-size: 1.1rem;
+}
+
+.full-students-gov.container .accordion-section .accordion-heading {
+  background-color: #eeeeee;
+}
+.full-students-gov.container .accordion-section .accordion-heading i {
+  background-color: #00c0ff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 150px;
+  padding: 90px 0 50px 0;
+}
+.grid-container .card {
+  width: 100%;
+  min-height: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+}
+.grid-container .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.grid-container .card .card-content {
+  padding: 25px 35px 18px 45px;
+  background: #fff;
+  position: absolute;
+  bottom: -10%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  right: 50%;
+  transform: translateX(50%);
+  width: 100%;
+}
+.grid-container .card .card-content .sub-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.grid-container .card .card-content h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+@media (min-width: 1010px) {
+  .grid-container .card .card-content h3 p {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 700px) {
+  .grid-container .card .card-content p {
+    font-size: 1.1rem;
+  }
+}
+.grid-container .card .card-content .decoration {
+  position: absolute;
+  width: 57px;
+  height: 60px;
+  background-color: #00c0ff;
+  border-radius: 10px;
+  left: 0%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  display: none;
+}
+@media (min-width: 800px) {
+  .grid-container .card .card-content .decoration {
+    display: block;
+  }
+}
+@media (min-width: 800px) {
+  .grid-container .card .card-content {
+    right: -40%;
+    transform: none;
+    width: unset;
+  }
+}
+@media (min-width: 1200px) {
+  .grid-container .card .card-content {
+    right: -25%;
+  }
+}
+@media (min-width: 400px) {
+  .grid-container .card {
+    width: 70%;
+  }
+}
+@media (min-width: 700px) {
+  .grid-container .card {
+    width: 60%;
+  }
+}
+@media (min-width: 800px) {
+  .grid-container .card {
+    width: 50%;
+  }
+}
+@media (min-width: 1010px) {
+  .grid-container .card {
+    margin: 0;
+    width: 65%;
+  }
+}
+
+@media (max-width: 1010px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.students-gov-content.stud-union .grid-container .card .decoration {
+  background-color: #5a83ed;
+}
+
 .search-form {
   position: relative;
   padding: 44px 32px;
