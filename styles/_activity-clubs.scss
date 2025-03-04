@@ -1,13 +1,13 @@
 @use "./variables";
 
-.full-clubs.container {
+.full-clubs.container, .full-students-gov.container, .full-students-un.container {
     max-width: 1200px;
     padding-right: 0;
     padding-left: 10px;
     margin: 0 auto;
 }
 
-.full-clubs.container {
+.full-clubs.container, .full-students-gov.container, .full-students-un.container {
     .aside-grid {
         display: block; 
         @media (min-width: 1024px) { 
@@ -20,16 +20,28 @@
     }
 }
 
-.full-clubs {
+.full-clubs, .full-students-gov, .full-students-un {
     &.container {
         display: flex;
         flex-direction: column;
-        gap: 50px;
-        padding-bottom: 300px;
     }
 }
 
-.clubs-wrapper {
+.full-clubs {
+    &.container {
+        padding-bottom: 300px;
+        gap: 50px;
+    }
+}
+
+.full-students-gov, .full-students-un {
+    &.container {
+        padding-bottom: 100px;
+        gap: 60px;
+    }
+}
+
+.clubs-wrapper, .students-gov-wrapper {
     @media (min-width: 400px) { 
         padding: 20px 15px 15px;
     }
@@ -229,6 +241,13 @@
         width: 50px;
         height: 50px;
     }
+
+    .full-students-gov, .full-students-un {
+        &.container {
+            gap: 160px;
+        }
+    }
+    
 }
 
 @media (min-width: 700px) {
