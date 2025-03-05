@@ -1,5 +1,5 @@
 @import "./variables";
-header {
+custom-header {
     position: fixed;
     top: 0;
     left: 0; right: 0;
@@ -340,7 +340,7 @@ nav {
 
 
 @media screen and (min-width: 1440px) {
-    header {
+    custom-header {
         font-size: 1rem;
     }
     nav {
