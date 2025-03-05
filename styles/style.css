@@ -2624,7 +2624,7 @@ h3 {
     margin-bottom: 32px;
   }
 }
-footer {
+custom-footer {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -2633,27 +2633,27 @@ footer {
   padding: 50px 0;
   overflow-x: hidden;
 }
-footer p {
+custom-footer p {
   font-weight: 600;
   cursor: default;
 }
-footer a {
+custom-footer a {
   color: inherit;
   line-height: 150%;
 }
-footer *::-moz-selection {
+custom-footer *::-moz-selection {
   background-color: #fbfbfb;
   color: #5a83ed;
 }
-footer *::selection {
+custom-footer *::selection {
   background-color: #fbfbfb;
   color: #5a83ed;
 }
-footer .font-size::-moz-selection {
+custom-footer .font-size::-moz-selection {
   background-color: #fbfbfb;
   color: #5a83ed;
 }
-footer .font-size::selection {
+custom-footer .font-size::selection {
   background-color: #fbfbfb;
   color: #5a83ed;
 }
@@ -2743,7 +2743,7 @@ footer .font-size::selection {
 }
 
 @media screen and (min-width: 835px) {
-  footer {
+  custom-footer {
     padding: 64px 0;
   }
   .footer-top {
