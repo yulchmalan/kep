@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Столяр Марія Василівна",
+      "position": "Голова студентської ради",
+      "group": "ПІ-21-03",
+      "image": "/kep/images/student.png"
+    },
+    {
+      "name": "Іваненко Петро Ігорович",
+      "position": "Заступник голови",
+      "group": "ПІ-21-03",
+      "image": "/kep/images/student.png"
+    },
+    {
+      "name": "Ковальчук Оксана Дмитрівна",
+      "position": "Секретар",
+      "group": "ПІ-21-03",
+      "image": "/kep/images/student.png"
+    },
+    {
+        "name": "Столяр Марія Василівна",
+        "position": "Голова студентської ради",
+        "group": "ПІ-21-03",
+        "image": "/kep/images/student.png"
+      },
+      {
+        "name": "Іваненко Петро Ігорович",
+        "position": "Заступник голови",
+        "group": "ПІ-21-03",
+        "image": "/kep/images/student.png"
+      },
+      {
+        "name": "Ковальчук Оксана Дмитрівна",
+        "position": "Секретар",
+        "group": "ПІ-21-03",
+        "image": "/kep/images/student.png"
+      }
+  ]
+  
