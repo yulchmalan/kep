@@ -78,16 +78,6 @@ const headerContent = `
               </ul>
             </li>
             <li class="dropdown">
-              <span>Вступнику <i class="fa-solid fa-chevron-down"></i></span>
-              <ul class="dropdown-menu">
-                <li><a href="#">Нормативно-правова база</a></li>
-                <li><a href="#">Протоколи</a></li>
-                <li><a href="#">Рейтингові списки</a></li>
-                <li><a href="#">Інформація про вступ</a></li>
-                <li><a href="#">Підготовчі курси</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
               <span>Викладачу <i class="fa-solid fa-chevron-down"></i></span>
               <ul class="dropdown-menu">
                 <li><a href="#">Атестація педагогічних працівників</a></li>
@@ -101,6 +91,16 @@ const headerContent = `
               <ul class="dropdown-menu">
                 <li><a href="#">Стипендіальне забезпечення</a></li>
                 <li><a href="#">Каталог дисциплін вільного вибору</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <span>Вступнику <i class="fa-solid fa-chevron-down"></i></span>
+              <ul class="dropdown-menu">
+                <li><a href="#">Нормативно-правова база</a></li>
+                <li><a href="#">Протоколи</a></li>
+                <li><a href="#">Рейтингові списки</a></li>
+                <li><a href="#">Інформація про вступ</a></li>
+                <li><a href="#">Підготовчі курси</a></li>
               </ul>
             </li>
           </ul>
