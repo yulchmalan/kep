@@ -1,4 +1,6 @@
-const footerContent = `
+class Footer extends HTMLElement {
+  ConnectedCallBack() {
+    this.innerHTML = `
   <div class="container">
     <div class="footer-top">
         <div>
@@ -44,5 +46,7 @@ const footerContent = `
     </div>
     </div>
 `;
+  }
+}
 
-document.querySelector("footer").innerHTML = footerContent;
+customElements.define("footer", Footer);

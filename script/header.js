@@ -109,5 +109,4 @@ class Header extends HTMLElement {
   }
 }
 
-// document.querySelector("header").innerHTML = headerContent;
-customElements.define("header", Header);
+customElements.define("custom-header", Header);
