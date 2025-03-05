@@ -1,5 +1,5 @@
 class Footer extends HTMLElement {
-  ConnectedCallBack() {
+  connectedCallback() {
     this.innerHTML = `<div class="container">
     <div class="footer-top">
         <div>

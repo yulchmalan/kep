@@ -1,5 +1,5 @@
 class Header extends HTMLElement {
-  ConnectedCallBack() {
+  connectedCallback() {
     this.innerHTML = `
   <address class="topbar">
         <div class="container">
