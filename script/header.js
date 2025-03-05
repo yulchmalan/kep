@@ -1,16 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const base = "/kep/";
-  document.querySelectorAll("a").forEach((link) => {
-    if (
-      link.getAttribute("href") &&
-      !link.getAttribute("href").startsWith("http")
-    ) {
-      link.setAttribute("href", base + link.getAttribute("href"));
-    }
-  });
-});
-
-const headerContent = `
+class Header extends HTMLElement {
+  ConnectedCallBack() {
+    this.innerHTML = `
   <address class="topbar">
         <div class="container">
           <div class="topbar_section">
@@ -116,5 +106,8 @@ const headerContent = `
         </div>
       </nav>
 `;
+  }
+}
 
-document.querySelector("header").innerHTML = headerContent;
+// document.querySelector("header").innerHTML = headerContent;
+customElements.define("header", Header);
