@@ -42,7 +42,7 @@ class Header extends HTMLElement {
               <ul class="dropdown-menu">
                 <li><a href="#">Історія коледжу</a></li>
                 <li><a href="#">Пам'яті Захисників України</a></li>
-                <li><a href="#">Адміністрація</a></li>
+                <li><a href="pages/about/administration.html">Адміністрація</a></li>
                 <li><a href="#">Кадровий склад</a></li>
                 <li><a href="#">Матеріально-технічне забезпечення</a></li>
               </ul>

@@ -13,10 +13,11 @@
     />
     <link rel="stylesheet" href="../../styles/reset.css" />
     <link rel="stylesheet" href="../../styles/style.css" />
+    <base href="https://yulchmalan.github.io/kep/" />
     <title>Дирекція</title>
   </head>
   <body>
-    <header></header>
+    <custom-header></custom-header>
     <div id="search" class="">
       <div class="overlay"></div>
       <button type="button" id="close-search">
@@ -24,11 +25,45 @@
       </button>
       <input type="text" placeholder="Введіть пошуковий запит" />
     </div>
-    <main></main>
-    <footer></footer>
+    <main>
+      <section class="admin_hero-section">
+        <div class="container">
+          <div class="image-wrapper">
+            <img
+              src="images/berehovskij.png"
+              alt="Директор Коледжу Елекронних Приладів Береговський Василь Васильович"
+            />
+          </div>
+          <div class="text-content">
+            <h1>Ласкаво просимо до дирекції!</h1>
+            <p class="quote">
+              <i class="fa-solid fa-quote-left"></i>Ми віримо, що
+              <b>знання</b> — це світло, <b>навчання</b> — це шлях, а
+              <b>дослідження</b> — ключ до змін. Наша праця спрямована на те,
+              щоб принести користь суспільству, і ці ідеї стають особливо
+              важливими в наші дні.<i class="fa-solid fa-quote-right"></i>
+            </p>
+            <a class="btn btn-primary font-size" href="#"
+              ><span
+                >Дізнатися більше про коледж<i
+                  class="fa-solid fa-arrow-right"
+                ></i></span
+            ></a>
+          </div>
+        </div>
+      </section>
+      <section class="tabs-section">
+        <div class="container">
+          <div class="tabs-buttons"></div>
+          <div class="tabs-content"></div>
+        </div>
+      </section>
+    </main>
+    <custom-footer></custom-footer>
     <script src="script/header.js"></script>
     <script src="script/footer.js"></script>
     <script src="script/navbar.js"></script>
+    <script src="script/tabs.js"></script>
     <script src="script/script.js" defer></script>
   </body>
 </html>
