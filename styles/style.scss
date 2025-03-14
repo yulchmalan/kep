@@ -61,7 +61,7 @@ nav * {
     }
 }
 
-section:not(.hero-section):not(#lastEvents):not(.faq-container) h2 {
+section:not(.hero-section):not(#lastEvents):not(.faq-container):not(.tabs-section) h2 {
     font-size: 1.5rem;
     font-weight: 600;
     cursor: default;
@@ -206,7 +206,7 @@ section:not(.hero-section):not(#lastEvents):not(.faq-container) h2 {
 }
 
 @media screen and (min-width: 1024px) {
-    section:not(.hero-section):not(#lastEvents):not(.faq-container) h2 {
+    section:not(.hero-section):not(#lastEvents):not(.faq-container):not(.tabs-section) h2 {
         font-size: 2rem;
     }
     .font-size {
@@ -255,7 +255,7 @@ section:not(.hero-section):not(#lastEvents):not(.faq-container) h2 {
 }
 
 @media screen and (min-width: 1600px) {
-    section:not(.hero-section):not(#lastEvents) h2 {
+    section:not(.hero-section):not(#lastEvents):not(.tabs-section) h2 {
         font-size: 2.5rem;
     }
     .container { 
